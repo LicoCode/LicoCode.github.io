@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://Lico.space">
   <title>XML解析的四种方式 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。 　　XML的解析方式分为四种：1、DOM解析；2、SAX解析；3、JDOM解析；4、DOM4J解析。其中前两种属于基础方法，是官方提供的平台无关的解析方式；后两种属于扩展方法，它们是在基础的方法上扩展出来的，只适">
+  <meta name="description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。">
 <meta name="keywords" content="XML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XML解析的四种方式">
 <meta property="og:url" content="http://Lico.space/2017/01/24/XML解析的四种方式/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。 　　XML的解析方式分为四种：1、DOM解析；2、SAX解析；3、JDOM解析；4、DOM4J解析。其中前两种属于基础方法，是官方提供的平台无关的解析方式；后两种属于扩展方法，它们是在基础的方法上扩展出来的，只适">
+<meta property="og:description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-29T12:44:03.014Z">
+<meta property="og:updated_time" content="2017-09-29T12:53:31.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XML解析的四种方式">
-<meta name="twitter:description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。 　　XML的解析方式分为四种：1、DOM解析；2、SAX解析；3、JDOM解析；4、DOM4J解析。其中前两种属于基础方法，是官方提供的平台无关的解析方式；后两种属于扩展方法，它们是在基础的方法上扩展出来的，只适">
+<meta name="twitter:description" content="​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -176,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。</p>
+<a id="more"></a>
 <p>　　XML的解析方式分为四种：1、DOM解析；2、SAX解析；3、JDOM解析；4、DOM4J解析。其中前两种属于基础方法，是官方提供的平台无关的解析方式；后两种属于扩展方法，它们是在基础的方法上扩展出来的，只适用于java平台。</p>
 <p>　　针对以下XML文件，会对四种方式进行详细描述：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">book</span> <span class="attr">id</span>=<span class="string">"1"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>冰与火之歌<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">author</span>&gt;</span>乔治马丁<span class="tag">&lt;/<span class="name">author</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">year</span>&gt;</span>2014<span class="tag">&lt;/<span class="name">year</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">price</span>&gt;</span>89<span class="tag">&lt;/<span class="name">price</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">book</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">book</span> <span class="attr">id</span>=<span class="string">"2"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>安徒生童话<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">year</span>&gt;</span>2004<span class="tag">&lt;/<span class="name">year</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">price</span>&gt;</span>77<span class="tag">&lt;/<span class="name">price</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">language</span>&gt;</span>English<span class="tag">&lt;/<span class="name">language</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">book</span>&gt;</span>    </div><div class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></div></pre></td></tr></table></figure>
