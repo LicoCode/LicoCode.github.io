@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://Lico.space">
-  <title>Archives: 2017 | Lico</title>
+  <title>C#枚举与结构 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Lico的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lico">
-<meta property="og:url" content="http://Lico.space/archives/2017/index.html">
+  <meta name="description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
+<meta name="keywords" content="C Sharp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#枚举与结构">
+<meta property="og:url" content="http://Lico.space/2017/11/14/C#枚举与结构/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="Lico的博客">
+<meta property="og:description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-14T03:05:02.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lico">
-<meta name="twitter:description" content="Lico的博客">
+<meta name="twitter:title" content="C#枚举与结构">
+<meta name="twitter:description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -153,36 +155,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C#枚举与结构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/14/C#枚举与结构/" class="archive-article-date">
-  	<time datetime="2017-11-14T03:00:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/C#枚举与结构/">C#枚举与结构</a>
+    <h1 class="article-title" itemprop="name">
+      C#枚举与结构
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/14/C#枚举与结构/" class="archive-article-date">
+  	<time datetime="2017-11-14T03:00:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。</p>
+<a id="more"></a>
+<h4 id="结构的声明"><a href="#结构的声明" class="headerlink" title="结构的声明"></a>结构的声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">struct &lt;结构类型名&gt;</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">	&lt;accessibility&gt;&lt;type&gt;&lt;name&gt; </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意：变量声明时，不能赋初值，除非字段标明为const或static。</p>
+<p>系统自动生成默认构造函数对结构成员符默认值，结构的默认构造函数不能手动定义。</p>
+<p>没有析构函数。</p>
+<p>可以实现接口，不能使用abstract、protecte、和sealed修饰符。</p>
+<h4 id="结构的使用"><a href="#结构的使用" class="headerlink" title="结构的使用"></a>结构的使用</h4><p>结构使用时，与类不同的是，结构可以不用new实例化，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"> using System;</div><div class="line"> </div><div class="line"> namespace ConsoleApp</div><div class="line">&#123;</div><div class="line">    class Program</div><div class="line">    &#123;</div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            person per = new person(1,&quot;王五&quot;,true,12,&quot;深圳&quot;);</div><div class="line">            person per1;</div><div class="line">            per1.id = 1;</div><div class="line">            Console.ReadLine();</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    struct person &#123;</div><div class="line">        public int id;</div><div class="line">        public string name;</div><div class="line">        public bool sex;</div><div class="line">        public uint age;</div><div class="line">        public string addr;</div><div class="line">        public person(int id,string name,bool sex,uint age,string addr) &#123;</div><div class="line">            this.id = id;</div><div class="line">            this.name = name;</div><div class="line">            this.sex = sex;</div><div class="line">            this.age = age;</div><div class="line">            this.addr = addr;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="结构的总结"><a href="#结构的总结" class="headerlink" title="结构的总结"></a>结构的总结</h4><p>结构是值类型，成员默认为公共类型，方法声明与类一致，字段不能赋初值（除非为const或static），构造方法赋值必须带参数。</p>
+<h3 id="C-Sharp枚举类型"><a href="#C-Sharp枚举类型" class="headerlink" title="C Sharp枚举类型"></a>C Sharp枚举类型</h3><p>定义枚举类型，使用关键字enum。</p>
+<p>语法如下：</p>
+<p>enum 枚举名[: 基本类型名]</p>
+<p>{</p>
+<pre><code>枚举成员
+</code></pre><p>}</p>
+<h4 id="枚举基本介绍"><a href="#枚举基本介绍" class="headerlink" title="枚举基本介绍"></a>枚举基本介绍</h4><p>基本类型默认为int，可显式定义为byte，sbyte，short，ushort，int，uint，long，ulong，不能为char；</p>
+<p>枚举成员名称不能相同，关联值可以相同；</p>
+<p>枚举类型与基础类型不能隐式转换，除0外；</p>
+<p>枚举关联值默认赋值，依赖前置值；</p>
+<p>支持大多数整数运算符；</p>
+<h4 id="枚举使用实例"><a href="#枚举使用实例" class="headerlink" title="枚举使用实例"></a>枚举使用实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line"></div><div class="line"></div><div class="line">namespace ConsoleApp</div><div class="line">&#123;</div><div class="line">    class Program</div><div class="line">    &#123;</div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line"></div><div class="line">            WriteToday(weekday.MON);</div><div class="line">            weekday day = 0;</div><div class="line">            Console.WriteLine(day);</div><div class="line">            Console.ReadLine();</div><div class="line">        &#125;</div><div class="line">        static void WriteToday(weekday today) &#123;</div><div class="line">            switch (today)</div><div class="line">            &#123;</div><div class="line">                case weekday.SUN:</div><div class="line">                    Console.WriteLine(&quot;today is SUN&quot;);</div><div class="line">                    break;</div><div class="line">                case weekday.MON:</div><div class="line">                    Console.WriteLine(&quot;today is MON&quot;);</div><div class="line">                    break;</div><div class="line">                default:</div><div class="line">                    Console.WriteLine(&quot;today is LAZY&quot;);</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public enum weekday : int &#123;</div><div class="line">        SUN = 1,</div><div class="line">        MON,</div><div class="line">        TUE,</div><div class="line">        WED,</div><div class="line">        THU,</div><div class="line">        FRI,</div><div class="line">        SAT</div><div class="line">    &#125;</div><div class="line">        </div><div class="line">       </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,171 +216,134 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2017/11/14/C#枚举与结构/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/14/Java注解解析/" class="archive-article-date">
-  	<time datetime="2017-02-14T14:47:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/14/Java注解解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java注解解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/14/Java注解解析/">Java注解解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构"><span class="toc-number">1.</span> <span class="toc-text">结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的声明"><span class="toc-number">1.1.</span> <span class="toc-text">结构的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的使用"><span class="toc-number">1.2.</span> <span class="toc-text">结构的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的总结"><span class="toc-number">1.3.</span> <span class="toc-text">结构的总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-Sharp枚举类型"><span class="toc-number">2.</span> <span class="toc-text">C Sharp枚举类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#枚举基本介绍"><span class="toc-number">2.1.</span> <span class="toc-text">枚举基本介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#枚举使用实例"><span class="toc-number">2.2.</span> <span class="toc-text">枚举使用实例</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/24/XML解析的四种方式/" class="archive-article-date">
-  	<time datetime="2017-01-24T13:43:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/24/XML解析的四种方式/">XML解析的四种方式</a>
-    </h1>
+  
+  
+  
+  <section id="comments">
+	<div id="valine" class="valine"></div>
+		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+		<script src='/lib/Valine.min.js'></script>
+		<script>
+		new Valine({
+			av: AV,
+			el: '.valine' ,
+			app_id: "WuKduphh2oAwk1qBBNkDgdJ4-gzGzoHsz",
+			app_key: "r1WrG6FVBfhUepLHid4iqXX5",
+			placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+		});
+		</script>
+</section>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/18/常见算法代码实现/" class="archive-article-date">
-  	<time datetime="2017-01-18T06:14:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-        </div>
-    	 
+	
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/18/常见算法代码实现/">常见算法代码实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/16/hexo搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-01-16T13:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/16/hexo搭建博客教程/">hexo搭建博客教程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -381,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
