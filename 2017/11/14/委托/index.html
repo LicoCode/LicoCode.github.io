@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://Lico.space">
-  <title>C#枚举与结构 | Lico</title>
+  <title>C#委托 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
-<meta name="keywords" content="C Sharp">
+  <meta name="description" content="引言通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。">
+<meta name="keywords" content="C sharp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#枚举与结构">
-<meta property="og:url" content="http://Lico.space/2017/11/14/C#枚举与结构/index.html">
+<meta property="og:title" content="C#委托">
+<meta property="og:url" content="http://Lico.space/2017/11/14/委托/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
+<meta property="og:description" content="引言通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-14T03:05:02.817Z">
+<meta property="og:updated_time" content="2017-11-14T09:22:05.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#枚举与结构">
-<meta name="twitter:description" content="结构处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。">
+<meta name="twitter:title" content="C#委托">
+<meta name="twitter:description" content="引言通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -155,48 +155,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C#枚举与结构" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-委托" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C#枚举与结构
+      C#委托
     </h1>
   
 
         
-        <a href="/2017/11/14/C#枚举与结构/" class="archive-article-date">
-  	<time datetime="2017-11-14T03:00:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
+        <a href="/2017/11/14/委托/" class="archive-article-date">
+  	<time datetime="2017-11-14T08:20:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>处理一些由不同类型数据元素所构成的数据，例如：一个学生的基本情况由学号、性别、出生日期等数据元素组成，类似与Java的Entity类，C Sharp结构除了不能继承与被继承，与类一致，同时结构是值类型，对具有值语义的数据结构特别有用，复数，矩形等等。</p>
+        <h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h4><p>通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。</p>
 <a id="more"></a>
-<h4 id="结构的声明"><a href="#结构的声明" class="headerlink" title="结构的声明"></a>结构的声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">struct &lt;结构类型名&gt;</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">	&lt;accessibility&gt;&lt;type&gt;&lt;name&gt; </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意：变量声明时，不能赋初值，除非字段标明为const或static。</p>
-<p>系统自动生成默认构造函数对结构成员符默认值，结构的默认构造函数不能手动定义。</p>
-<p>没有析构函数。</p>
-<p>可以实现接口，不能使用abstract、protecte、和sealed修饰符。</p>
-<h4 id="结构的使用"><a href="#结构的使用" class="headerlink" title="结构的使用"></a>结构的使用</h4><p>结构使用时，与类不同的是，结构可以不用new实例化，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"> using System;</div><div class="line"> </div><div class="line"> namespace ConsoleApp</div><div class="line">&#123;</div><div class="line">    class Program</div><div class="line">    &#123;</div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            person per = new person(1,&quot;王五&quot;,true,12,&quot;深圳&quot;);</div><div class="line">            person per1;</div><div class="line">            per1.id = 1;</div><div class="line">            Console.ReadLine();</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    struct person &#123;</div><div class="line">        public int id;</div><div class="line">        public string name;</div><div class="line">        public bool sex;</div><div class="line">        public uint age;</div><div class="line">        public string addr;</div><div class="line">        public person(int id,string name,bool sex,uint age,string addr) &#123;</div><div class="line">            this.id = id;</div><div class="line">            this.name = name;</div><div class="line">            this.sex = sex;</div><div class="line">            this.age = age;</div><div class="line">            this.addr = addr;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="结构的总结"><a href="#结构的总结" class="headerlink" title="结构的总结"></a>结构的总结</h4><p>结构是值类型，成员默认为公共类型，方法声明与类一致，字段不能赋初值（除非为const或static），构造方法赋值必须带参数。</p>
-<h3 id="C-Sharp枚举类型"><a href="#C-Sharp枚举类型" class="headerlink" title="C Sharp枚举类型"></a>C Sharp枚举类型</h3><p>定义枚举类型，使用关键字enum。</p>
-<p>语法如下：</p>
-<p>enum 枚举名[: 基本类型名]</p>
-<p>{</p>
-<pre><code>枚举成员
-</code></pre><p>}</p>
-<h4 id="枚举基本介绍"><a href="#枚举基本介绍" class="headerlink" title="枚举基本介绍"></a>枚举基本介绍</h4><p>基本类型默认为int，可显式定义为byte，sbyte，short，ushort，int，uint，long，ulong，不能为char；</p>
-<p>枚举成员名称不能相同，关联值可以相同；</p>
-<p>枚举类型与基础类型不能隐式转换，除0外；</p>
-<p>枚举关联值默认赋值，依赖前置值；</p>
-<p>支持大多数整数运算符；</p>
-<h4 id="枚举使用实例"><a href="#枚举使用实例" class="headerlink" title="枚举使用实例"></a>枚举使用实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line"></div><div class="line"></div><div class="line">namespace ConsoleApp</div><div class="line">&#123;</div><div class="line">    class Program</div><div class="line">    &#123;</div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line"></div><div class="line">            WriteToday(weekday.MON);</div><div class="line">            weekday day = 0;</div><div class="line">            Console.WriteLine(day);</div><div class="line">            Console.ReadLine();</div><div class="line">        &#125;</div><div class="line">        static void WriteToday(weekday today) &#123;</div><div class="line">            switch (today)</div><div class="line">            &#123;</div><div class="line">                case weekday.SUN:</div><div class="line">                    Console.WriteLine(&quot;today is SUN&quot;);</div><div class="line">                    break;</div><div class="line">                case weekday.MON:</div><div class="line">                    Console.WriteLine(&quot;today is MON&quot;);</div><div class="line">                    break;</div><div class="line">                default:</div><div class="line">                    Console.WriteLine(&quot;today is LAZY&quot;);</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public enum weekday : int &#123;</div><div class="line">        SUN = 1,</div><div class="line">        MON,</div><div class="line">        TUE,</div><div class="line">        WED,</div><div class="line">        THU,</div><div class="line">        FRI,</div><div class="line">        SAT</div><div class="line">    &#125;</div><div class="line">        </div><div class="line">       </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="委托声明"><a href="#委托声明" class="headerlink" title="委托声明"></a>委托声明</h4><p>属性 修饰符 delegate 返回类型 标识符 （[形参表]）；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Program</div><div class="line">    &#123;</div><div class="line">        public static void show(int id,string name) &#123;</div><div class="line">            Console.WriteLine(&quot;&#123;0&#125;,&#123;1&#125;&quot;,id,name);</div><div class="line">            </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public static void showAgain(int id, string name)</div><div class="line">        &#123;</div><div class="line">            Console.WriteLine(&quot;&#123;0&#125;,&#123;1&#125;&quot;, id, name);</div><div class="line">           </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            SampleDelegate sample = new SampleDelegate(show);</div><div class="line">            sample +=show;</div><div class="line">            sample.Invoke(1,&quot;Lico&quot;);</div><div class="line">            Console.ReadLine();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    public delegate void SampleDelegate(int id,string name);</div></pre></td></tr></table></figure>
+<p><u>多路委托时，只能得到最后封装的方法的返回值</u></p>
 
       
 
@@ -210,7 +193,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C Sharp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C sharp</a>
         		</li>
       		
 		</ul>
@@ -266,7 +249,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2017/11/14/C#枚举与结构/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2017/11/14/委托/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,8 +264,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/02/14/Java注解解析/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java注解解析</div>
+    <a href="/2017/11/14/迭代器与分部类/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C#迭代器与分部类</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -309,7 +292,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构"><span class="toc-number">1.</span> <span class="toc-text">结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的声明"><span class="toc-number">1.1.</span> <span class="toc-text">结构的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的使用"><span class="toc-number">1.2.</span> <span class="toc-text">结构的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构的总结"><span class="toc-number">1.3.</span> <span class="toc-text">结构的总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-Sharp枚举类型"><span class="toc-number">2.</span> <span class="toc-text">C Sharp枚举类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#枚举基本介绍"><span class="toc-number">2.1.</span> <span class="toc-text">枚举基本介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#枚举使用实例"><span class="toc-number">2.2.</span> <span class="toc-text">枚举使用实例</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#委托声明"><span class="toc-number">2.</span> <span class="toc-text">委托声明</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -457,11 +440,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">-C Sharp</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">C Sharp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,7 +464,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">-C sharp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">C sharp</a>
               </li>
             
             <div class="clearfix"></div>
