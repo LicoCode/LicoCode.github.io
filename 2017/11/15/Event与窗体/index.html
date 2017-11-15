@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lico">
 <meta property="og:description" content="Event介绍事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。 .NET Framework中所定义的事件是基于委托模型的。 在C#中，事件是委托的一种特殊的表现形式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-15T05:36:54.869Z">
+<meta property="og:updated_time" content="2017-11-15T08:37:39.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Event与窗体">
 <meta name="twitter:description" content="Event介绍事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。 .NET Framework中所定义的事件是基于委托模型的。 在C#中，事件是委托的一种特殊的表现形式。">
@@ -186,8 +186,8 @@
 <p>4、定义事件处理程序的方法成员。</p>
 <p>5、使用委托对象封装方法成员。</p>
 <p>6、引用委托方法处理触发事件。</p>
-<p>举例： class Program</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        EventSource Events = new EventSource();</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">        EventReceivers Eventr = new EventReceivers();</div><div class="line">        Eventr.Subscribe(Events);</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">public delegate void TestEventDel(object sender, EventArgs e);</div><div class="line">public class EventSource &#123;</div><div class="line">    public event TestEventDel TestEvents;</div><div class="line">    public void RaiseTestEvent() &#123;</div><div class="line">        TestEventDel temp = TestEvents;</div><div class="line">        if (null != temp) &#123;</div><div class="line">            Console.WriteLine(&quot;!null&quot;);</div><div class="line">            temp(this,new EventArgs());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class EventReceivers &#123;</div><div class="line">    public void ReceiveEvents(object sender,EventArgs e) &#123;</div><div class="line">        Console.WriteLine(&quot;接收事件来自于：&#123;0&#125;&quot;, sender.ToString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void Subscribe(EventSource source) &#123;</div><div class="line">        TestEventDel test = new TestEventDel(ReceiveEvents);</div><div class="line">        source.TestEvents += test;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"> class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        EventSource Events = new EventSource();</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">        EventReceivers Eventr = new EventReceivers();</div><div class="line">        Eventr.Subscribe(Events);</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">public delegate void TestEventDel(object sender, EventArgs e);</div><div class="line">public class EventSource &#123;</div><div class="line">    public event TestEventDel TestEvents;</div><div class="line">    public void RaiseTestEvent() &#123;</div><div class="line">        TestEventDel temp = TestEvents;</div><div class="line">        if (null != temp) &#123;</div><div class="line">            Console.WriteLine(&quot;!null&quot;);</div><div class="line">            temp(this,new EventArgs());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class EventReceivers &#123;</div><div class="line">    public void ReceiveEvents(object sender,EventArgs e) &#123;</div><div class="line">        Console.WriteLine(&quot;接收事件来自于：&#123;0&#125;&quot;, sender.ToString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void Subscribe(EventSource source) &#123;</div><div class="line">        TestEventDel test = new TestEventDel(ReceiveEvents);</div><div class="line">        source.TestEvents += test;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Event总结"><a href="#Event总结" class="headerlink" title="Event总结"></a>Event总结</h3><p>事件作为特殊的委托，与委托的区别在于有特定的格式，声明时使用Event关键字，运用的依旧是委托的机制。</p>
 <h3 id="WinForm"><a href="#WinForm" class="headerlink" title="WinForm"></a>WinForm</h3><p>C#的窗体应用就是典型的事件实际运用，当然还包含了分部类的运用，对于C#窗体的知识点，我们要做到了解，理解机制，会找资料，在开发中不断记忆。</p>
 <p>简单实例：</p>
@@ -473,6 +473,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Event</a>
               </li>
              
@@ -485,10 +489,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
@@ -497,11 +497,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">委托</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">委托</a>
               </li>
              
               <li class="article-tag-list-item">

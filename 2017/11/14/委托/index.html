@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lico">
 <meta property="og:description" content="引言通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-15T01:31:38.902Z">
+<meta property="og:updated_time" content="2017-11-15T12:41:22.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#委托">
 <meta name="twitter:description" content="引言通过对C# 基础语法的学习，我们已经习惯了这种面向对象的语法，创建类的实例，通过实例访问类的属性、字段等，通过实例调用方法或者直接调用静态方法，但委托给我们带来了全新的思想，每一个方法也能作为方法的参数进行操作，其实我们不用觉得很难理解，任何语言最终都是汇编语言的形式，语法知识外在的体现，为我们提供更好的编码方式而已。">
@@ -179,7 +179,9 @@
 <a id="more"></a>
 <h4 id="委托声明"><a href="#委托声明" class="headerlink" title="委托声明"></a>委托声明</h4><p>属性 修饰符 delegate 返回类型 标识符 （[形参表]）；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Program</div><div class="line">    &#123;</div><div class="line">        public static void show(int id,string name) &#123;</div><div class="line">            Console.WriteLine(&quot;&#123;0&#125;,&#123;1&#125;&quot;,id,name);</div><div class="line">            </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public static void showAgain(int id, string name)</div><div class="line">        &#123;</div><div class="line">            Console.WriteLine(&quot;&#123;0&#125;,&#123;1&#125;&quot;, id, name);</div><div class="line">           </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            SampleDelegate sample = new SampleDelegate(show);</div><div class="line">            sample +=show;</div><div class="line">            sample.Invoke(1,&quot;Lico&quot;);</div><div class="line">            Console.ReadLine();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    public delegate void SampleDelegate(int id,string name);</div></pre></td></tr></table></figure>
-<p><u>多路委托时，只能得到最后封装的方法的返回值</u></p>
+<blockquote>
+<p>多路委托时，只能得到最后封装的方法的返回值</p>
+</blockquote>
 
       
 
@@ -464,6 +466,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Event</a>
               </li>
              
@@ -476,10 +482,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
@@ -488,11 +490,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">委托</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">委托</a>
               </li>
              
               <li class="article-tag-list-item">
