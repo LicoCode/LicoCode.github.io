@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://Lico.space">
-  <title>Tag: 注解 | Lico</title>
+  <title>Event与窗体 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Lico的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lico">
-<meta property="og:url" content="http://Lico.space/tags/注解/index.html">
+  <meta name="description" content="Event介绍事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。 .NET Framework中所定义的事件是基于委托模型的。 在C#中，事件是委托的一种特殊的表现形式。">
+<meta name="keywords" content="Event,WinForm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Event与窗体">
+<meta property="og:url" content="http://Lico.space/2017/11/15/Event与窗体/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="Lico的博客">
+<meta property="og:description" content="Event介绍事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。 .NET Framework中所定义的事件是基于委托模型的。 在C#中，事件是委托的一种特殊的表现形式。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-15T05:36:54.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lico">
-<meta name="twitter:description" content="Lico的博客">
+<meta name="twitter:title" content="Event与窗体">
+<meta name="twitter:description" content="Event介绍事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。 .NET Framework中所定义的事件是基于委托模型的。 在C#中，事件是委托的一种特殊的表现形式。">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -153,71 +155,207 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Event与窗体" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/14/Java注解解析/" class="archive-article-date">
-  	<time datetime="2017-02-14T14:47:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/14/Java注解解析/">Java注解解析</a>
+    <h1 class="article-title" itemprop="name">
+      Event与窗体
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/15/Event与窗体/" class="archive-article-date">
+  	<time datetime="2017-11-15T02:40:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Event介绍"><a href="#Event介绍" class="headerlink" title="Event介绍"></a>Event介绍</h3><p>事件是类在发生其关注的事情时用于提供通知的一种方式。客户端提供事件处理程序（event handler）为相应的事件添加可执行代码。</p>
+<p>.NET Framework中所定义的事件是基于委托模型的。</p>
+<p>在C#中，事件是委托的一种特殊的表现形式。</p>
+<a id="more"></a>
+<p>编写事件处理程序的一般步骤为：</p>
+<p>1、声明委托类型</p>
+<p>2、定义System.EventArgs类的派生类，存储事件的相关信息。</p>
+<p>3、对可能触发事件的类，使用关键字Event声明事件。</p>
+<p>4、定义事件处理程序的方法成员。</p>
+<p>5、使用委托对象封装方法成员。</p>
+<p>6、引用委托方法处理触发事件。</p>
+<p>举例： class Program</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        EventSource Events = new EventSource();</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">        EventReceivers Eventr = new EventReceivers();</div><div class="line">        Eventr.Subscribe(Events);</div><div class="line">        Events.RaiseTestEvent();</div><div class="line">        Console.ReadLine();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">public delegate void TestEventDel(object sender, EventArgs e);</div><div class="line">public class EventSource &#123;</div><div class="line">    public event TestEventDel TestEvents;</div><div class="line">    public void RaiseTestEvent() &#123;</div><div class="line">        TestEventDel temp = TestEvents;</div><div class="line">        if (null != temp) &#123;</div><div class="line">            Console.WriteLine(&quot;!null&quot;);</div><div class="line">            temp(this,new EventArgs());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class EventReceivers &#123;</div><div class="line">    public void ReceiveEvents(object sender,EventArgs e) &#123;</div><div class="line">        Console.WriteLine(&quot;接收事件来自于：&#123;0&#125;&quot;, sender.ToString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void Subscribe(EventSource source) &#123;</div><div class="line">        TestEventDel test = new TestEventDel(ReceiveEvents);</div><div class="line">        source.TestEvents += test;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Event总结"><a href="#Event总结" class="headerlink" title="Event总结"></a>Event总结</h3><p>事件作为特殊的委托，与委托的区别在于有特定的格式，声明时使用Event关键字，运用的依旧是委托的机制。</p>
+<h3 id="WinForm"><a href="#WinForm" class="headerlink" title="WinForm"></a>WinForm</h3><p>C#的窗体应用就是典型的事件实际运用，当然还包含了分部类的运用，对于C#窗体的知识点，我们要做到了解，理解机制，会找资料，在开发中不断记忆。</p>
+<p>简单实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">public partial class Form1 : Form</div><div class="line">    &#123;</div><div class="line">        public Form1()</div><div class="line">        &#123;</div><div class="line">            InitializeComponent();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        private void Form1_Load(object sender, EventArgs e)</div><div class="line">        &#123;</div><div class="line">            label3.Text = &quot;程序加载！&quot;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">       </div><div class="line"></div><div class="line">        private void btn_click(object sender, EventArgs e)</div><div class="line">        &#123;</div><div class="line">            string name = textBox1.Text;</div><div class="line">            string password = textBox2.Text;</div><div class="line">            label3.Text = &quot;你的账号: &quot;+name +&quot;,密码: &quot;+ password;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        private void mouse_click(object sender,MouseEventArgs e) &#123;</div><div class="line">            label3.Text = &quot;鼠标点击位置：&quot; + e.X + &quot;,&quot;+e.Y;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        private void form1_keypress(object sender,KeyPressEventArgs e) &#123;</div><div class="line">            label3.Text += e.KeyChar.ToString();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div></pre></td><td class="code"><pre><div class="line">partial class Form1</div><div class="line">    &#123;</div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 必需的设计器变量。</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        private System.ComponentModel.IContainer components = null;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 清理所有正在使用的资源。</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=&quot;disposing&quot;&gt;如果应释放托管资源，为 true；否则为 false。&lt;/param&gt;</div><div class="line">        protected override void Dispose(bool disposing)</div><div class="line">        &#123;</div><div class="line">            if (disposing &amp;&amp; (components != null))</div><div class="line">            &#123;</div><div class="line">                components.Dispose();</div><div class="line">            &#125;</div><div class="line">            base.Dispose(disposing);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        #region Windows 窗体设计器生成的代码</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 设计器支持所需的方法 - 不要修改</div><div class="line">        /// 使用代码编辑器修改此方法的内容。</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        private void InitializeComponent()</div><div class="line">        &#123;</div><div class="line">            this.button1 = new System.Windows.Forms.Button();</div><div class="line">            this.textBox1 = new System.Windows.Forms.TextBox();</div><div class="line">            this.label1 = new System.Windows.Forms.Label();</div><div class="line">            this.label2 = new System.Windows.Forms.Label();</div><div class="line">            this.textBox2 = new System.Windows.Forms.TextBox();</div><div class="line">            this.label3 = new System.Windows.Forms.Label();</div><div class="line">            this.SuspendLayout();</div><div class="line">            // </div><div class="line">            // button1</div><div class="line">            // </div><div class="line">            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;</div><div class="line">            this.button1.Location = new System.Drawing.Point(117, 172);</div><div class="line">            this.button1.Name = &quot;button1&quot;;</div><div class="line">            this.button1.Size = new System.Drawing.Size(75, 23);</div><div class="line">            this.button1.TabIndex = 0;</div><div class="line">            this.button1.Text = &quot;登录\r\n&quot;;</div><div class="line">            this.button1.UseVisualStyleBackColor = true;</div><div class="line">            this.button1.Click += new System.EventHandler(this.btn_click);</div><div class="line">            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.form1_keypress);</div><div class="line">            // </div><div class="line">            // textBox1</div><div class="line">            // </div><div class="line">            this.textBox1.Location = new System.Drawing.Point(117, 59);</div><div class="line">            this.textBox1.Name = &quot;textBox1&quot;;</div><div class="line">            this.textBox1.Size = new System.Drawing.Size(100, 21);</div><div class="line">            this.textBox1.TabIndex = 1;</div><div class="line">            this.textBox1.Text = &quot;name&quot;;</div><div class="line">            // </div><div class="line">            // label1</div><div class="line">            // </div><div class="line">            this.label1.AutoSize = true;</div><div class="line">            this.label1.Location = new System.Drawing.Point(47, 68);</div><div class="line">            this.label1.Name = &quot;label1&quot;;</div><div class="line">            this.label1.Size = new System.Drawing.Size(29, 12);</div><div class="line">            this.label1.TabIndex = 2;</div><div class="line">            this.label1.Text = &quot;账号&quot;;</div><div class="line">            // </div><div class="line">            // label2</div><div class="line">            // </div><div class="line">            this.label2.AutoSize = true;</div><div class="line">            this.label2.Location = new System.Drawing.Point(49, 115);</div><div class="line">            this.label2.Name = &quot;label2&quot;;</div><div class="line">            this.label2.Size = new System.Drawing.Size(29, 12);</div><div class="line">            this.label2.TabIndex = 3;</div><div class="line">            this.label2.Text = &quot;密码&quot;;</div><div class="line">            // </div><div class="line">            // textBox2</div><div class="line">            // </div><div class="line">            this.textBox2.Location = new System.Drawing.Point(117, 105);</div><div class="line">            this.textBox2.Name = &quot;textBox2&quot;;</div><div class="line">            this.textBox2.Size = new System.Drawing.Size(100, 21);</div><div class="line">            this.textBox2.TabIndex = 4;</div><div class="line">            this.textBox2.Text = &quot;password&quot;;</div><div class="line">            // </div><div class="line">            // label3</div><div class="line">            // </div><div class="line">            this.label3.AutoSize = true;</div><div class="line">            this.label3.Location = new System.Drawing.Point(115, 9);</div><div class="line">            this.label3.Name = &quot;label3&quot;;</div><div class="line">            this.label3.Size = new System.Drawing.Size(0, 12);</div><div class="line">            this.label3.TabIndex = 5;</div><div class="line">            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouse_click);</div><div class="line">            // </div><div class="line">            // Form1</div><div class="line">            // </div><div class="line">            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);</div><div class="line">            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;</div><div class="line">            this.ClientSize = new System.Drawing.Size(337, 362);</div><div class="line">            this.Controls.Add(this.label3);</div><div class="line">            this.Controls.Add(this.textBox2);</div><div class="line">            this.Controls.Add(this.label2);</div><div class="line">            this.Controls.Add(this.label1);</div><div class="line">            this.Controls.Add(this.textBox1);</div><div class="line">            this.Controls.Add(this.button1);</div><div class="line">            this.Name = &quot;Form1&quot;;</div><div class="line">            this.Text = &quot;Fuck&quot;;</div><div class="line">            this.Load += new System.EventHandler(this.Form1_Load);</div><div class="line">            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouse_click);</div><div class="line">            this.ResumeLayout(false);</div><div class="line">            this.PerformLayout();</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        #endregion</div><div class="line"></div><div class="line">        private System.Windows.Forms.Button button1;</div><div class="line">        private System.Windows.Forms.TextBox textBox1;</div><div class="line">        private System.Windows.Forms.Label label1;</div><div class="line">        private System.Windows.Forms.Label label2;</div><div class="line">        private System.Windows.Forms.TextBox textBox2;</div><div class="line">        private System.Windows.Forms.Label label3;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">static class Program</div><div class="line">    &#123;</div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 应用程序的主入口点。</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        [STAThread]</div><div class="line">        static void Main()</div><div class="line">        &#123;</div><div class="line">            Application.EnableVisualStyles();</div><div class="line">            Application.SetCompatibleTextRenderingDefault(false);</div><div class="line">            Application.Run(new Form1());</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">注解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Event</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WinForm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
+        			<a href="/categories/C#/" class="article-tag-list-link color3">C#</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2017/11/15/Event与窗体/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/14/委托/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C#委托</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Event介绍"><span class="toc-number">1.</span> <span class="toc-text">Event介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event总结"><span class="toc-number">2.</span> <span class="toc-text">Event总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WinForm"><span class="toc-number">3.</span> <span class="toc-text">WinForm</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  
+  
+  <section id="comments">
+	<div id="valine" class="valine"></div>
+		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+		<script src='/lib/Valine.min.js'></script>
+		<script>
+		new Valine({
+			av: AV,
+			el: '.valine' ,
+			app_id: "WuKduphh2oAwk1qBBNkDgdJ4-gzGzoHsz",
+			app_key: "r1WrG6FVBfhUepLHid4iqXX5",
+			placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+		});
+		</script>
+</section>
   
 
-    
+  
+	
+  
 
 
           </div>
@@ -240,9 +378,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
