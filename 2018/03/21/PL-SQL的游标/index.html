@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://Lico.space">
-  <title>hexo搭建博客教程 | Lico</title>
+  <title>PL/SQL的游标 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo是什么？　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="1.基本原理​    在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其分配上下文区（Context Area），即一个缓存区。游标是指向该区的一个指针，或是命名一个工作区（Work Area），或是一种结构化数据模型。 ​    游标分为显式游标和隐式游标两种。显示游标是由用户声明和操作的一种游标；隐式游标是Oracle为所有数据操纵语">
+<meta name="keywords" content="Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo搭建博客教程">
-<meta property="og:url" content="http://Lico.space/2017/01/16/hexo搭建博客教程/index.html">
+<meta property="og:title" content="PL&#x2F;SQL的游标">
+<meta property="og:url" content="http://Lico.space/2018/03/21/PL-SQL的游标/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="Hexo是什么？　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta property="og:description" content="1.基本原理​    在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其分配上下文区（Context Area），即一个缓存区。游标是指向该区的一个指针，或是命名一个工作区（Work Area），或是一种结构化数据模型。 ​    游标分为显式游标和隐式游标两种。显示游标是由用户声明和操作的一种游标；隐式游标是Oracle为所有数据操纵语">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://lico.space/2017/01/16/hexo搭建博客教程/DNS.png">
-<meta property="og:updated_time" content="2017-11-15T01:17:20.408Z">
+<meta property="og:updated_time" content="2018-03-26T06:32:16.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo搭建博客教程">
-<meta name="twitter:description" content="Hexo是什么？　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
-<meta name="twitter:image" content="http://lico.space/2017/01/16/hexo搭建博客教程/DNS.png">
+<meta name="twitter:title" content="PL&#x2F;SQL的游标">
+<meta name="twitter:description" content="1.基本原理​    在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其分配上下文区（Context Area），即一个缓存区。游标是指向该区的一个指针，或是命名一个工作区（Work Area），或是一种结构化数据模型。 ​    游标分为显式游标和隐式游标两种。显示游标是由用户声明和操作的一种游标；隐式游标是Oracle为所有数据操纵语">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -157,88 +155,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo搭建博客教程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PL-SQL的游标" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo搭建博客教程
+      PL/SQL的游标
     </h1>
   
 
         
-        <a href="/2017/01/16/hexo搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-01-16T13:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-16</time>
+        <a href="/2018/03/21/PL-SQL的游标/" class="archive-article-date">
+  	<time datetime="2018-03-21T01:03:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo是什么？"><a href="#Hexo是什么？" class="headerlink" title="Hexo是什么？"></a>Hexo是什么？</h3><p>　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<a id="more"></a>
-<h3 id="为什么使用Hexo？"><a href="#为什么使用Hexo？" class="headerlink" title="为什么使用Hexo？"></a>为什么使用Hexo？</h3><p>　　Hexo与Wordpress（博客平台）不同，wordpress运行需要搭建PHP运行环境和数据库，但是在网上申请云主机来搭建的话，需要不少的费用，而Hexo由于可以生成静态网页，我们完全可以利用基于git的代码托管平台的Pages服务功能，也就是我们熟知的Github</p>
-<p>（有必要了解下Git，Github的区别）以及Coding等等，建立永久免费的博客网站（Github、Coding应该暂时不会GG吧！0.0），另外Wordpress更适合新手，操作简单，感觉Hexo的*格更高，可以通过安装使用Hexo学到很多。<br><figure class="highlight plain"><figcaption><span>Pages服务</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一个免费的静态网页托管和演示服务。您可以使用  Pages服务 托管博客、项目官网等静态网页，还可以绑定自定义域名。</div></pre></td></tr></table></figure>`</p>
-<h3 id="安装Hexo（安装到本地电脑即可）"><a href="#安装Hexo（安装到本地电脑即可）" class="headerlink" title="安装Hexo（安装到本地电脑即可）"></a>安装Hexo（安装到本地电脑即可）</h3><h4 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h4><p>　　Hexo是基于node js的，所以我们肯定得安装Node.js，添加到path喔，安装方法自行搜索下吧。其次，我们还得安装git，在进行Hexo新建（init）网站时，会用到git的相关功能，记得要将git添加到path，一般安装时是默认添加的，安装方法自行搜索。<br>准备完成，进行Hexo安装。<br><figure class="highlight plain"><figcaption><span>Node.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 </div><div class="line">Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 </div><div class="line">Node.js 的包管理器 npm，是全球最大的开源库生态系统。</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span>Git</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Git是一款免费、开源的分布式版本控制系统。</div></pre></td></tr></table></figure>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>　　安装Hexo操作基本都涉及命令行，需要使用npm，不过node.js v0.6.X之后的版本都集成了npm工具，我们可以直接使用，在命令行输入运行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<p>等待安装完成，至此hexo的核心包就安装完成了。</p>
-<figure class="highlight plain"><figcaption><span>npm</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 允许用户从NPM服务器下载别人编写的第三方包到本地使用。</div><div class="line">- 允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。</div><div class="line">- 允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</div><div class="line">  </div></pre></td></tr></table></figure>
-<h4 id="HEXO建站"><a href="#HEXO建站" class="headerlink" title="HEXO建站"></a>HEXO建站</h4><p>　　安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo init &lt;folder&gt;</div><div class="line"><span class="meta">$</span> cd &lt;folder&gt;</div><div class="line"><span class="meta">$</span> npm install</div></pre></td></tr></table></figure>
-<p>如果是在windows环境下，执行下列命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">D:\&gt;hexo init blog</div></pre></td></tr></table></figure>
-<p>意味着在D盘的blog文件夹新建所需文件。</p>
-<p>新建完成后，指定文件夹的目录如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
-<p>各目录包含信息可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">Hexo官网</a>。</p>
-<h4 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h4><p>在网站目录下也就是前面的blog目录中执行下列命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo generate</div></pre></td></tr></table></figure>
-<p>在blog目录的public文件夹中生成静态网页，命令可简写为“hexo g”；</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo server</div></pre></td></tr></table></figure>
-<p>启动服务器，命令可简写为“hexo s”；</p>
-<p>默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
-<p>其它命令参考<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">Hexo官网</a>。</p>
-<h3 id="部署blog到Github与Coding"><a href="#部署blog到Github与Coding" class="headerlink" title="部署blog到Github与Coding"></a>部署blog到Github与Coding</h3><h4 id="为什么要在GITHUB与CODING都部署呢？"><a href="#为什么要在GITHUB与CODING都部署呢？" class="headerlink" title="为什么要在GITHUB与CODING都部署呢？"></a>为什么要在GITHUB与CODING都部署呢？</h4><p>　　部署Github上就可以实现blog，只是由于Github是国外的，而且有长城的存在，你懂的，访问速度相对较慢，通过域名解析设置，可以实现国外访问github，国内访问coding（原gitcafe），后面再详细说明。</p>
-<p>在GitHub与Coding上创建远程仓库：</p>
-<p>Github上的仓库名称为“user_name.github.io”，例如“LicoCode.github.io,</p>
-<p>”Coding上的仓库名称为“user_name.coding.me”，例如“LicoCode.coding.me”。</p>
-<p>　　名称这样设置，是因为我们需要开启pages服务，有个唯一的名称方便访问，这也是为了防止blog部署后，访问时出现样式加载问题(我的就出现过0.0),在Coding上是这样解释的<a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Codeing Pages</a>,</p>
-<p>Coding Pages 分为「用户 Pages」与「项目 Pages」两种类型。不同的 Pages 类型在访问链接与部署来源上存在差异。</p>
-<table>
-<thead>
-<tr>
-<th>Coding Pages 类型</th>
-<th>Pages默认分配的URL</th>
-<th>允许的部署来源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>用户 Pages</td>
-<td>{user_name}.coding.me</td>
-<td>master分支</td>
-</tr>
-<tr>
-<td>项目 Pages</td>
-<td>{user_name}.coding.me/{project_name}</td>
-<td>master分支、coding-pages分支、或master分支中的/docs目录</td>
-</tr>
-</tbody>
-</table>
-<p>　　用户 Pages」可以通过 <code>{user_name}.coding.me</code> 形式的 URL 直接访问，适合用作个人或组织的演示网站； 「项目 Pages」需通过 <code>{user_name}.coding.me/{project_name}</code> 形式的 URL 访问，适合用作项目的演示网站。</p>
-<p>　　远程仓库建立完毕，开启pages功能，github在仓库的setting选项中设置，coding在仓库页面可以直接看见有pages服务选项，设置即可。</p>
-<p>　　然后就需要将本地的静态网页部署到github和coding上，通过修改_config.ym文件的deploy属性信息，可以实现一键部署，先将网上的deploy设置贴上：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo: </div><div class="line">		<span class="tag">&lt;<span class="name">--</span> 远程仓库地址可以在仓库页面找到 <span class="attr">--</span>&gt;</span></div><div class="line">        coding：https://git.coding.net/LicoCode/LicoCode.coding.me.git </div><div class="line">        github: https://github.com/LicoCode/LicoCode.github.io</div><div class="line">    branch: master</div></pre></td></tr></table></figure>
-<p>　　只可惜我在部署时总是部署不上去，也没找到原因，只能手动部署，顺带学习git使用吧0.0，部署方式的话，就是将本地的blog目录下的public文件夹中的内容推送到刚刚创建的远程仓库，好好看看git的使用教程吧，就不多说了，推送完成后刚刚创建的远程仓库就有了public文件夹中的文件，这是我们就可以通过“licocode.github.io”和“licocode.coding.me”分别访问部署在github和coding上的blog了（这两个blog是独立的，只要有一个，blog就可以访问）。</p>
-<h3 id="设置域名解析"><a href="#设置域名解析" class="headerlink" title="设置域名解析"></a>设置域名解析</h3><p>　　这个设置纯粹是为了提高访问的体验感，国内访问coding的，国外访问github的，减少访问的延迟。</p>
-<p>1.域名解析设置情况如下：</p>
-<img src="/2017/01/16/hexo搭建博客教程/DNS.png" alt="This is an example image" title="This is an example image">
-<p>2.在远程仓库根目录新建文件“CNAME”，文件内容为你的域名，不需要www。</p>
-<p>3.在pages服务中设置域名，然后就可以通过域名访问了。</p>
-<h3 id="教程结束，撒花！"><a href="#教程结束，撒花！" class="headerlink" title="教程结束，撒花！"></a>教程结束，撒花！</h3>
+        <h2 id="1-基本原理"><a href="#1-基本原理" class="headerlink" title="1.基本原理"></a>1.基本原理</h2><p>​    在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其分配上下文区（Context Area），即一个缓存区。游标是指向该区的一个指针，或是命名一个工作区（Work Area），或是一种结构化数据模型。</p>
+<p>​    游标分为显式游标和隐式游标两种。显示游标是由用户声明和操作的一种游标；隐式游标是Oracle为所有数据操纵语句自动声明的一种游标。</p>
+<h2 id="2-显示游标"><a href="#2-显示游标" class="headerlink" title="2.显示游标"></a>2.显示游标</h2><p>​    显式游标的处理包括声明游标、打开游标、提取游标、关闭游标4个步骤。</p>
+<h3 id="2-1-声明游标"><a href="#2-1-声明游标" class="headerlink" title="2.1 声明游标"></a>2.1 声明游标</h3><p>语法：</p>
+<blockquote>
+<p>​    CURSOR &lt;游标名&gt; IS SELECT&lt;语句&gt;;</p>
+</blockquote>
+<p>INTO子句中的变量的类型都必须与查询的选择列表的类型相兼容，否则将拒绝执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  --pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase; --声明游标</div></pre></td></tr></table></figure>
+<h3 id="2-2-打开游标"><a href="#2-2-打开游标" class="headerlink" title="2.2 打开游标"></a>2.2 打开游标</h3><p>​    语法：</p>
+<blockquote>
+<p>OPEN &lt;游标名&gt;;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  --pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  OPEN product_cursor; --打开游标</div></pre></td></tr></table></figure>
+<h3 id="2-3提取游标"><a href="#2-3提取游标" class="headerlink" title="2.3提取游标"></a>2.3提取游标</h3><p>​    语法：</p>
+<blockquote>
+<p>FETCH &lt;游标名&gt; INTO &lt;变量列表&gt;;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  OPEN product_cursor; </div><div class="line">  FETCH product_cursor INTO pname; --提取游标</div></pre></td></tr></table></figure>
+<p>FETCH语句每执行一次，游标向后移动一行，直到结束（游标只能逐个向后移动，不能跳跃移动或是向前移动）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">begin</div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname; --提取游标</div><div class="line">  while product_cursor%found loop</div><div class="line">    dbms_output.put_line (&apos;产品名:&apos; ||pname );</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">end;</div></pre></td></tr></table></figure>
+<h3 id="2-4-关闭游标"><a href="#2-4-关闭游标" class="headerlink" title="2.4 关闭游标"></a>2.4 关闭游标</h3><p>​    语法：</p>
+<blockquote>
+<p>CLOSE&lt;游标名&gt;；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">begin</div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  while product_cursor%found loop</div><div class="line">    dbms_output.put_line (&apos;产品名:&apos; ||pname );</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">  close product_cursor; --关闭游标</div><div class="line">end;</div></pre></td></tr></table></figure>
+<p>关闭游标与游标相关联的资源也会被释放，包括用来存储活动集的存储空间，以及用来存储活动集的临时空间。关闭游标后，再从游标提取数据是非法的，会产生下面的Oracle错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ORA-1001:Invalid CURSOR --非法游标</div></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ORA-1001:FETCH out of sequence --超出界限</div></pre></td></tr></table></figure></p>
+<p>用游标也能实现修改和删除操作，但必须在游标定义时指定FOR子句后面的编辑类，如DELETE或UPDATE。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">DECLARE</div><div class="line">  type product_record is RECORD</div><div class="line">  (</div><div class="line">     pname varchar2(100) </div><div class="line">  );</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  FOR product_record in product_cursor LOOP</div><div class="line">    IF product_record.productname = &apos;&apos; THEN</div><div class="line">      UPDATE productbase SET productname = &apos;&apos;;</div><div class="line">    END IF;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h2 id="3-隐式游标"><a href="#3-隐式游标" class="headerlink" title="3.隐式游标"></a>3.隐式游标</h2><p>每个隐式游标必须有一个INTO子句，因此使用隐式游标的SELECT语句只选中一行数据或者只产生一行数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DECLARE</div><div class="line">  pname varchar2(100);  </div><div class="line">BEGIN</div><div class="line">  SELECT productname INTO pname FROM productbase where productid = &apos;1&apos;;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h2 id="4-游标属性"><a href="#4-游标属性" class="headerlink" title="4.游标属性"></a>4.游标属性</h2><p>无论是显式游标还是隐式游标，均有%ISOPEN，%FOUND，%NOTFOUND和%ROWCOUNT四种属性。</p>
+<h3 id="4-1-是否找到游标（-FOUND）"><a href="#4-1-是否找到游标（-FOUND）" class="headerlink" title="4.1 是否找到游标（%FOUND）"></a>4.1 是否找到游标（%FOUND）</h3><p>该属性表示当前游标是否指向有效一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">OPEN product_cursor;</div><div class="line">FETCH product_cursor INTO pname;</div><div class="line">LOOP</div><div class="line">  EXIT WHEN NOT product_cursor%FOUND;</div><div class="line">END LOOP;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DELETE FROM productbase WHERE productname = &apos;Computer&apos;; </div><div class="line">IF SQL%FOUND THEN</div><div class="line">  INSERT INTO productbase VALUES(&apos;Android&apos;);</div><div class="line">ELSE</div><div class="line">  INSERT INTO productbase VALUES(&apos;Apple&apos;); </div><div class="line">END IF;</div></pre></td></tr></table></figure>
+<h3 id="4-2-是否没找到游标（-NOTFOUND）"><a href="#4-2-是否没找到游标（-NOTFOUND）" class="headerlink" title="4.2 是否没找到游标（%NOTFOUND）"></a>4.2 是否没找到游标（%NOTFOUND）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BEGIN    </div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  LOOP</div><div class="line">    EXIT WHEN teacher_cur%NOTFOUND;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h3 id="4-3-游标行数（-ROWCOUNT）"><a href="#4-3-游标行数（-ROWCOUNT）" class="headerlink" title="4.3 游标行数（%ROWCOUNT）"></a>4.3 游标行数（%ROWCOUNT）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BEGIN    </div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  LOOP</div><div class="line">    EXIT WHEN teacher_cur%ROWCOUNT=10;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h3 id="4-4-游标是打开（-ISOPEN）"><a href="#4-4-游标是打开（-ISOPEN）" class="headerlink" title="4.4 游标是打开（%ISOPEN）"></a>4.4 游标是打开（%ISOPEN）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">IF product_cursor%ISOPEN THEN</div><div class="line">  fetch product_cursor into pname;</div><div class="line">ELSE</div><div class="line">  OPEN product_cursor;</div><div class="line">END IF;</div></pre></td></tr></table></figure>
+<h3 id="4-5-参数化游标"><a href="#4-5-参数化游标" class="headerlink" title="4.5 参数化游标"></a>4.5 参数化游标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">ACCEPT name prompt &apos;Pleace input the name:&apos;</div><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor(CURSOR_NAME VARCHER) is select productname from productbase WHERE productname=CURSOR_NAME;</div><div class="line">begin</div><div class="line">  open product_cursor(name);</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  while product_cursor%found loop</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">  close product_cursor;</div><div class="line">end;</div></pre></td></tr></table></figure>
+<h2 id="5-游标变量"><a href="#5-游标变量" class="headerlink" title="5.游标变量"></a>5.游标变量</h2><p>引用类型声明语法：</p>
+<blockquote>
+<p>REF type</p>
+</blockquote>
+<p>5.1 声明游标变量</p>
+<p>游标变量语法：</p>
+<blockquote>
+<p>TYPE&lt;类型名&gt; IS REF CURSOR </p>
+<p>RETURN&lt;返回类型&gt;；</p>
+</blockquote>
+<p>定义游标变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR</div><div class="line">  RETURN productbase%ROWTYPE;        --定义使用%ROWTYPE</div><div class="line"></div><div class="line">  TYPE productRecord IS RECORD</div><div class="line">  (</div><div class="line">     productname productbase.productname%TYPE</div><div class="line">  );                                 --定义新的纪录类型</div><div class="line">  TYPE v_productRef IS REF CURSOR</div><div class="line">  RETURN productRecord;              --使用记录类型的游标变量</div><div class="line"></div><div class="line">  TYPE r_productRef IS REF CURSOR</div><div class="line">  RETURN productRecord%TYPE;         --另一类型定义</div><div class="line"></div><div class="line">  t_productCV t_productRef;          --声明上述类型的游标变量</div></pre></td></tr></table></figure>
+<p>定义非受限游标变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR；</div><div class="line">  t_productCV t_productRef;</div></pre></td></tr></table></figure>
+<p>5.2 打开游标变量</p>
+<p>语法：OPEN &lt;游标变量&gt; FOR <select语句>；</select语句></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR</div><div class="line">  RETURN productbase%ROWTYPE;        </div><div class="line">  t_productCV t_productRef;          </div><div class="line">BEGIN</div><div class="line">  OPEN t_productCV FOR</div><div class="line">    SELECT * FROM productbase;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<p>5.3 关闭游标变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CLOSE t_productCV;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -251,24 +248,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -318,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2017/01/16/hexo搭建博客教程/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://Lico.space/2018/03/21/PL-SQL的游标/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,15 +318,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/18/常见算法代码实现/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/26/PL-SQL的过程/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          常见算法代码实现
+          PL/SQL的过程
         
       </div>
     </a>
   
+  
+    <a href="/2017/11/21/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -365,7 +356,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo是什么？"><span class="toc-number">1.</span> <span class="toc-text">Hexo是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么使用Hexo？"><span class="toc-number">2.</span> <span class="toc-text">为什么使用Hexo？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo（安装到本地电脑即可）"><span class="toc-number">3.</span> <span class="toc-text">安装Hexo（安装到本地电脑即可）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装前的准备"><span class="toc-number">3.1.</span> <span class="toc-text">安装前的准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装"><span class="toc-number">3.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HEXO建站"><span class="toc-number">3.3.</span> <span class="toc-text">HEXO建站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行测试"><span class="toc-number">3.4.</span> <span class="toc-text">运行测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署blog到Github与Coding"><span class="toc-number">4.</span> <span class="toc-text">部署blog到Github与Coding</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么要在GITHUB与CODING都部署呢？"><span class="toc-number">4.1.</span> <span class="toc-text">为什么要在GITHUB与CODING都部署呢？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置域名解析"><span class="toc-number">5.</span> <span class="toc-text">设置域名解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#教程结束，撒花！"><span class="toc-number">6.</span> <span class="toc-text">教程结束，撒花！</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本原理"><span class="toc-number">1.</span> <span class="toc-text">1.基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-显示游标"><span class="toc-number">2.</span> <span class="toc-text">2.显示游标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-声明游标"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 声明游标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-打开游标"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 打开游标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3提取游标"><span class="toc-number">2.3.</span> <span class="toc-text">2.3提取游标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-关闭游标"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 关闭游标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-隐式游标"><span class="toc-number">3.</span> <span class="toc-text">3.隐式游标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-游标属性"><span class="toc-number">4.</span> <span class="toc-text">4.游标属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-是否找到游标（-FOUND）"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 是否找到游标（%FOUND）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-是否没找到游标（-NOTFOUND）"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 是否没找到游标（%NOTFOUND）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-游标行数（-ROWCOUNT）"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 游标行数（%ROWCOUNT）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-游标是打开（-ISOPEN）"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 游标是打开（%ISOPEN）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-参数化游标"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 参数化游标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-游标变量"><span class="toc-number">5.</span> <span class="toc-text">5.游标变量</span></a></li></ol>
                     </div>
                 </span>
             </div>

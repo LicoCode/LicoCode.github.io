@@ -155,6 +155,386 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PL-SQL的函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/26/PL-SQL的函数/">PL/SQL的过程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/26/PL-SQL的函数/" class="archive-article-date">
+  	<time datetime="2018-03-26T01:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    函数一般用于计算和返回一个值，可以将经常需要进行的计算写出函数。函数的调用时表达式的一部分，而过程的调用是一条PL/SQL语句，函数与过程的创建的形式上有些相似，只不过调用时函数要用表达式，而不像过程只需调用过程名。函数必须有一个返回值。</p>
+<h2 id="1-创建函数"><a href="#1-创建函数" class="headerlink" title="1.创建函数"></a>1.创建函数</h2><p>语法：</p>
+<blockquote>
+<p>CREATE [OR REPLACE] FUNCTION&lt;&gt;</p>
+<p>​    (&lt;参数1&gt;，[方式1]&lt;数据类型1&gt;，&lt;参数2&gt;,[方式2]&lt;数据类型2&gt;…)</p>
+<p>RETURN&lt;表达式&gt;</p>
+<p>IS|AS</p>
+<p>PL/SQL程序体</p>
+</blockquote>
+<p>RETURN 在声明部分定义一个返回参数的类型，而在函数体中必须有一个RETURN语句。当该语句执行时，如果表达式的类型与定义不符，该表达式将被转换为函数定义子句RETURN中指定的类型。同时控制将立即返回到调用环境。但是，函数可以有一个以上的返回语句。函数结束时还没有遇到返回语句，就会发生错误。</p>
+<p>函数通常只有in类型的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">CREATE PROCEDURE count_num</div><div class="line">   (product_name in productbase.productname%TYPE)</div><div class="line">  	RETURN NUMBER</div><div class="line">AS</div><div class="line">   out_num NUMBER;							--过程中的局部变量</div><div class="line">BEGIN</div><div class="line">    SELECT count(productname) INTO out_num</div><div class="line">    FROM productbase</div><div class="line">    WHERE productname=product_name;</div><div class="line">    RETURN(out_num)</div><div class="line">END count_num;</div></pre></td></tr></table></figure>
+<h2 id="2-调用函数"><a href="#2-调用函数" class="headerlink" title="2.调用函数"></a>2.调用函数</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SQL&gt;VARIABLE product_num NUMBER</div><div class="line"></div><div class="line">SQL&gt;EXECUTE product_num:=count_num('<span class="number">0000</span>A')</div></pre></td></tr></table></figure>
+<p>程序中调用函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DECLARE</div><div class="line">   product_num NUMBER;</div><div class="line">BEGIN</div><div class="line">   product_num:=count_num(&apos;0000A&apos;);</div><div class="line">END;</div></pre></td></tr></table></figure>
+<p>3.删除函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP FUNCTION count_num;</div></pre></td></tr></table></figure>
+<p>函数过时，需要重新定义,也不必先删除再创建，只需CREATE语句后面加上OR REPLACE关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE PROCEDURE count_num；</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Oraclea</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/26/PL-SQL的函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-PL-SQL的过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/26/PL-SQL的过程/">PL/SQL的过程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/26/PL-SQL的过程/" class="archive-article-date">
+  	<time datetime="2018-03-26T01:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-创建过程"><a href="#1-创建过程" class="headerlink" title="1.创建过程"></a>1.创建过程</h2><p>语法：</p>
+<blockquote>
+<p>CREATE [OR REPLACE] PROCEDURE&lt;过程名&gt;</p>
+<p>​    (&lt;参数1&gt;,[方式1]&lt;数据类型1&gt;,</p>
+<p>​    &lt;参数2&gt;,[方式2]&lt;数据类型2&gt;)</p>
+<p>IS|AS</p>
+<p>PL/SQL过程体</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE PROCEDURE count_num</div><div class="line">   (product_name in productbase.productname%TYPE)</div><div class="line">AS</div><div class="line">   out_num NUMBER;							--过程中的局部变量</div><div class="line">BEGIN</div><div class="line">    SELECT count(productname) INTO out_num</div><div class="line">    FROM productbase</div><div class="line">    WHERE productname=product_name;</div><div class="line">END count_num;</div></pre></td></tr></table></figure>
+<h2 id="2-调用过程"><a href="#2-调用过程" class="headerlink" title="2.调用过程"></a>2.调用过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EXECUTE count_num(&apos;0000A&apos;);</div></pre></td></tr></table></figure>
+<h2 id="3-删除过程"><a href="#3-删除过程" class="headerlink" title="3.删除过程"></a>3.删除过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP PROCEDURE count_num;</div></pre></td></tr></table></figure>
+<h2 id="4-过程的参数类型及传递"><a href="#4-过程的参数类型及传递" class="headerlink" title="4.过程的参数类型及传递"></a>4.过程的参数类型及传递</h2><h3 id="4-1-in-参数类型与out-参数类型"><a href="#4-1-in-参数类型与out-参数类型" class="headerlink" title="4.1 in 参数类型与out 参数类型"></a>4.1 in 参数类型与out 参数类型</h3><blockquote>
+<p>in参数类型是输入类型的参数，表示这个参数输入给过程，供过程使用。</p>
+<p>out参数类型是输出类型的参数，表示这个参数在过程中赋值，可以传给过程体以外的部分或环境。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE PROCEDURE double</div><div class="line">   (in_num in NUMBER,</div><div class="line">   out_num out NUMBER)  </div><div class="line">AS   					</div><div class="line">BEGIN</div><div class="line">    out_num:=in_num*2;</div><div class="line">END double;</div></pre></td></tr></table></figure>
+<h3 id="4-2-in-out-参数类型"><a href="#4-2-in-out-参数类型" class="headerlink" title="4.2 in out 参数类型"></a>4.2 in out 参数类型</h3><blockquote>
+<p>综合上述类型的参数，既向过程体传值，在过程体中也被赋值而传向过程体外。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE PROCEDURE double</div><div class="line">   (in_out_num in out NUMBER</div><div class="line">   )  </div><div class="line">AS   					</div><div class="line">BEGIN</div><div class="line">    in_out_num:=in_out_num*2;</div><div class="line">END double;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/26/PL-SQL的过程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-PL-SQL的游标" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/21/PL-SQL的游标/">PL/SQL的游标</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/21/PL-SQL的游标/" class="archive-article-date">
+  	<time datetime="2018-03-21T01:03:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-基本原理"><a href="#1-基本原理" class="headerlink" title="1.基本原理"></a>1.基本原理</h2><p>​    在PL/SQL块中执行SELECT、INSERT、UPDATE和DELETE语句时，Oracle会在内存中为其分配上下文区（Context Area），即一个缓存区。游标是指向该区的一个指针，或是命名一个工作区（Work Area），或是一种结构化数据模型。</p>
+<p>​    游标分为显式游标和隐式游标两种。显示游标是由用户声明和操作的一种游标；隐式游标是Oracle为所有数据操纵语句自动声明的一种游标。</p>
+<h2 id="2-显示游标"><a href="#2-显示游标" class="headerlink" title="2.显示游标"></a>2.显示游标</h2><p>​    显式游标的处理包括声明游标、打开游标、提取游标、关闭游标4个步骤。</p>
+<h3 id="2-1-声明游标"><a href="#2-1-声明游标" class="headerlink" title="2.1 声明游标"></a>2.1 声明游标</h3><p>语法：</p>
+<blockquote>
+<p>​    CURSOR &lt;游标名&gt; IS SELECT&lt;语句&gt;;</p>
+</blockquote>
+<p>INTO子句中的变量的类型都必须与查询的选择列表的类型相兼容，否则将拒绝执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  --pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase; --声明游标</div></pre></td></tr></table></figure>
+<h3 id="2-2-打开游标"><a href="#2-2-打开游标" class="headerlink" title="2.2 打开游标"></a>2.2 打开游标</h3><p>​    语法：</p>
+<blockquote>
+<p>OPEN &lt;游标名&gt;;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  --pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  OPEN product_cursor; --打开游标</div></pre></td></tr></table></figure>
+<h3 id="2-3提取游标"><a href="#2-3提取游标" class="headerlink" title="2.3提取游标"></a>2.3提取游标</h3><p>​    语法：</p>
+<blockquote>
+<p>FETCH &lt;游标名&gt; INTO &lt;变量列表&gt;;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  OPEN product_cursor; </div><div class="line">  FETCH product_cursor INTO pname; --提取游标</div></pre></td></tr></table></figure>
+<p>FETCH语句每执行一次，游标向后移动一行，直到结束（游标只能逐个向后移动，不能跳跃移动或是向前移动）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">begin</div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname; --提取游标</div><div class="line">  while product_cursor%found loop</div><div class="line">    dbms_output.put_line (&apos;产品名:&apos; ||pname );</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">end;</div></pre></td></tr></table></figure>
+<h3 id="2-4-关闭游标"><a href="#2-4-关闭游标" class="headerlink" title="2.4 关闭游标"></a>2.4 关闭游标</h3><p>​    语法：</p>
+<blockquote>
+<p>CLOSE&lt;游标名&gt;；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">begin</div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  while product_cursor%found loop</div><div class="line">    dbms_output.put_line (&apos;产品名:&apos; ||pname );</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">  close product_cursor; --关闭游标</div><div class="line">end;</div></pre></td></tr></table></figure>
+<p>关闭游标与游标相关联的资源也会被释放，包括用来存储活动集的存储空间，以及用来存储活动集的临时空间。关闭游标后，再从游标提取数据是非法的，会产生下面的Oracle错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ORA-1001:Invalid CURSOR --非法游标</div></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ORA-1001:FETCH out of sequence --超出界限</div></pre></td></tr></table></figure></p>
+<p>用游标也能实现修改和删除操作，但必须在游标定义时指定FOR子句后面的编辑类，如DELETE或UPDATE。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">DECLARE</div><div class="line">  type product_record is RECORD</div><div class="line">  (</div><div class="line">     pname varchar2(100) </div><div class="line">  );</div><div class="line">  cursor product_cursor is select productname from productbase;</div><div class="line">BEGIN</div><div class="line">  FOR product_record in product_cursor LOOP</div><div class="line">    IF product_record.productname = &apos;&apos; THEN</div><div class="line">      UPDATE productbase SET productname = &apos;&apos;;</div><div class="line">    END IF;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h2 id="3-隐式游标"><a href="#3-隐式游标" class="headerlink" title="3.隐式游标"></a>3.隐式游标</h2><p>每个隐式游标必须有一个INTO子句，因此使用隐式游标的SELECT语句只选中一行数据或者只产生一行数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DECLARE</div><div class="line">  pname varchar2(100);  </div><div class="line">BEGIN</div><div class="line">  SELECT productname INTO pname FROM productbase where productid = &apos;1&apos;;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h2 id="4-游标属性"><a href="#4-游标属性" class="headerlink" title="4.游标属性"></a>4.游标属性</h2><p>无论是显式游标还是隐式游标，均有%ISOPEN，%FOUND，%NOTFOUND和%ROWCOUNT四种属性。</p>
+<h3 id="4-1-是否找到游标（-FOUND）"><a href="#4-1-是否找到游标（-FOUND）" class="headerlink" title="4.1 是否找到游标（%FOUND）"></a>4.1 是否找到游标（%FOUND）</h3><p>该属性表示当前游标是否指向有效一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">OPEN product_cursor;</div><div class="line">FETCH product_cursor INTO pname;</div><div class="line">LOOP</div><div class="line">  EXIT WHEN NOT product_cursor%FOUND;</div><div class="line">END LOOP;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DELETE FROM productbase WHERE productname = &apos;Computer&apos;; </div><div class="line">IF SQL%FOUND THEN</div><div class="line">  INSERT INTO productbase VALUES(&apos;Android&apos;);</div><div class="line">ELSE</div><div class="line">  INSERT INTO productbase VALUES(&apos;Apple&apos;); </div><div class="line">END IF;</div></pre></td></tr></table></figure>
+<h3 id="4-2-是否没找到游标（-NOTFOUND）"><a href="#4-2-是否没找到游标（-NOTFOUND）" class="headerlink" title="4.2 是否没找到游标（%NOTFOUND）"></a>4.2 是否没找到游标（%NOTFOUND）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BEGIN    </div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  LOOP</div><div class="line">    EXIT WHEN teacher_cur%NOTFOUND;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h3 id="4-3-游标行数（-ROWCOUNT）"><a href="#4-3-游标行数（-ROWCOUNT）" class="headerlink" title="4.3 游标行数（%ROWCOUNT）"></a>4.3 游标行数（%ROWCOUNT）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">BEGIN    </div><div class="line">  open product_cursor;</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  LOOP</div><div class="line">    EXIT WHEN teacher_cur%ROWCOUNT=10;</div><div class="line">  END LOOP;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<h3 id="4-4-游标是打开（-ISOPEN）"><a href="#4-4-游标是打开（-ISOPEN）" class="headerlink" title="4.4 游标是打开（%ISOPEN）"></a>4.4 游标是打开（%ISOPEN）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">IF product_cursor%ISOPEN THEN</div><div class="line">  fetch product_cursor into pname;</div><div class="line">ELSE</div><div class="line">  OPEN product_cursor;</div><div class="line">END IF;</div></pre></td></tr></table></figure>
+<h3 id="4-5-参数化游标"><a href="#4-5-参数化游标" class="headerlink" title="4.5 参数化游标"></a>4.5 参数化游标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">ACCEPT name prompt &apos;Pleace input the name:&apos;</div><div class="line">declare </div><div class="line">  pname varchar2(100);</div><div class="line">  cursor product_cursor(CURSOR_NAME VARCHER) is select productname from productbase WHERE productname=CURSOR_NAME;</div><div class="line">begin</div><div class="line">  open product_cursor(name);</div><div class="line">  fetch product_cursor into pname;</div><div class="line">  while product_cursor%found loop</div><div class="line">    fetch product_cursor into pname;</div><div class="line">  end loop;</div><div class="line">  close product_cursor;</div><div class="line">end;</div></pre></td></tr></table></figure>
+<h2 id="5-游标变量"><a href="#5-游标变量" class="headerlink" title="5.游标变量"></a>5.游标变量</h2><p>引用类型声明语法：</p>
+<blockquote>
+<p>REF type</p>
+</blockquote>
+<p>5.1 声明游标变量</p>
+<p>游标变量语法：</p>
+<blockquote>
+<p>TYPE&lt;类型名&gt; IS REF CURSOR </p>
+<p>RETURN&lt;返回类型&gt;；</p>
+</blockquote>
+<p>定义游标变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR</div><div class="line">  RETURN productbase%ROWTYPE;        --定义使用%ROWTYPE</div><div class="line"></div><div class="line">  TYPE productRecord IS RECORD</div><div class="line">  (</div><div class="line">     productname productbase.productname%TYPE</div><div class="line">  );                                 --定义新的纪录类型</div><div class="line">  TYPE v_productRef IS REF CURSOR</div><div class="line">  RETURN productRecord;              --使用记录类型的游标变量</div><div class="line"></div><div class="line">  TYPE r_productRef IS REF CURSOR</div><div class="line">  RETURN productRecord%TYPE;         --另一类型定义</div><div class="line"></div><div class="line">  t_productCV t_productRef;          --声明上述类型的游标变量</div></pre></td></tr></table></figure>
+<p>定义非受限游标变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR；</div><div class="line">  t_productCV t_productRef;</div></pre></td></tr></table></figure>
+<p>5.2 打开游标变量</p>
+<p>语法：OPEN &lt;游标变量&gt; FOR <select语句>；</select语句></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">DECLARE </div><div class="line">  TYPE t_productRef IS REF CURSOR</div><div class="line">  RETURN productbase%ROWTYPE;        </div><div class="line">  t_productCV t_productRef;          </div><div class="line">BEGIN</div><div class="line">  OPEN t_productCV FOR</div><div class="line">    SELECT * FROM productbase;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<p>5.3 关闭游标变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CLOSE t_productCV;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/21/PL-SQL的游标/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/正则表达式/">正则表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/21/正则表达式/" class="archive-article-date">
+  	<time datetime="2017-11-21T02:46:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/21/正则表达式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Event与窗体" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -679,261 +1059,10 @@
 
 
   
-    <article id="post-XML解析的四种方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/24/XML解析的四种方式/">XML解析的四种方式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/24/XML解析的四种方式/" class="archive-article-date">
-  	<time datetime="2017-01-24T13:43:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    XML是一种通用的数据交换格式,它的平台无关性、语言无关性、系统无关性、给数据集成与交互带来了极大的方便。XML在不同的语言环境中解析方式都是一样的,只不过实现的语法不同而已。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/24/XML解析的四种方式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-常见算法代码实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/常见算法代码实现/">常见算法代码实现</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/18/常见算法代码实现/" class="archive-article-date">
-  	<time datetime="2017-01-18T06:14:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java/" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/18/常见算法代码实现/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建博客教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/16/hexo搭建博客教程/">hexo搭建博客教程</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/16/hexo搭建博客教程/" class="archive-article-date">
-  	<time datetime="2017-01-16T13:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Hexo是什么？"><a href="#Hexo是什么？" class="headerlink" title="Hexo是什么？"></a>Hexo是什么？</h3><p>　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/16/hexo搭建博客教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -944,7 +1073,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Lico
+    		&copy; 2018 Lico
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1068,6 +1197,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Oraclea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
@@ -1076,11 +1213,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">委托</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">委托</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
