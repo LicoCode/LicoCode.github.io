@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://Lico.space">
   <title>PL/SQL的过程 | Lico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体  123456789CREATE OR REPLACE PROCEDURE count_num   (produc">
+  <meta name="description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体">
 <meta name="keywords" content="Oracle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PL&#x2F;SQL的过程">
 <meta property="og:url" content="http://Lico.space/2018/03/26/PL-SQL的过程/index.html">
 <meta property="og:site_name" content="Lico">
-<meta property="og:description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体  123456789CREATE OR REPLACE PROCEDURE count_num   (produc">
+<meta property="og:description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-26T07:12:05.037Z">
+<meta property="og:updated_time" content="2018-06-20T13:46:03.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PL&#x2F;SQL的过程">
-<meta name="twitter:description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体  123456789CREATE OR REPLACE PROCEDURE count_num   (produc">
+<meta name="twitter:description" content="1.创建过程语法：  CREATE [OR REPLACE] PROCEDURE&amp;lt;过程名&amp;gt; ​    (&amp;lt;参数1&amp;gt;,[方式1]&amp;lt;数据类型1&amp;gt;, ​    &amp;lt;参数2&amp;gt;,[方式2]&amp;lt;数据类型2&amp;gt;) IS|AS PL/SQL过程体">
   
     <link rel="alternative" href="/atom.xml" title="Lico" type="application/atom+xml">
   
@@ -183,6 +183,7 @@
 <p>IS|AS</p>
 <p>PL/SQL过程体</p>
 </blockquote>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE PROCEDURE count_num</div><div class="line">   (product_name in productbase.productname%TYPE)</div><div class="line">AS</div><div class="line">   out_num NUMBER;							--过程中的局部变量</div><div class="line">BEGIN</div><div class="line">    SELECT count(productname) INTO out_num</div><div class="line">    FROM productbase</div><div class="line">    WHERE productname=product_name;</div><div class="line">END count_num;</div></pre></td></tr></table></figure>
 <h2 id="2-调用过程"><a href="#2-调用过程" class="headerlink" title="2.调用过程"></a>2.调用过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">EXECUTE count_num(&apos;0000A&apos;);</div></pre></td></tr></table></figure>
 <h2 id="3-删除过程"><a href="#3-删除过程" class="headerlink" title="3.删除过程"></a>3.删除过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP PROCEDURE count_num;</div></pre></td></tr></table></figure>
@@ -468,15 +469,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Event</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">WinForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Attribute</a>
               </li>
              
               <li class="article-tag-list-item">
