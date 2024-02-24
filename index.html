@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Lee</title><meta name="author" content="lichong"><meta name="copyright" content="lichong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Lee">
+<meta property="og:url" content="https://ilico.cn/index.html">
+<meta property="og:site_name" content="Lee">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ilico.cn/img/leecon.jfif">
+<meta property="article:author" content="lichong">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ilico.cn/img/leecon.jfif"><link rel="shortcut icon" href="/img/l.png"><link rel="canonical" href="https://ilico.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Lee',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-02-24 22:46:40'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 8 || hour >= 22
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/leecon.jfif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Lee"><span class="site-name">Lee</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/" title="关于费尔巴哈的提纲"><div class="post-bg" style="background: /img/"></div></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/" title="关于费尔巴哈的提纲">关于费尔巴哈的提纲</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-24T12:33:20.000Z" title="发表于 2024-02-24 20:33:20">2024-02-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-24T12:41:11.239Z" title="更新于 2024-02-24 20:41:11">2024-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%80%89%E8%AF%BB/">选读</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/#post-comment"><span class="valine-comment-count" data-xid="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">一从前的一切唯物主义——包括费尔巴哈的唯物主义——的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作人的感性活动，当作实践去理解，不是从主体方面去理解。因此，结果竟是这样，和唯物主义相反，唯心主义却把能动的方面发展了，但只是抽象地发展了，因为唯心主义当然是不知道现实的、感性的活动本身的。费尔巴哈想要研究跟思想客体确实不同的感性客体，但是他没有把人的活动本身理解为对象性的[gegenständliche]活动。因此，他在《基督教的本质》中仅把理论的活动看做是真正人的活动，而对于实践则只是从它的卑污的犹太人表现形式去理解和确定。因此，他不了解“革命的”、“实践批判的”活动的意义。
+二人的思维是否具有客观的[gegenständliche]真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于离开实践的思维的现实性或非现实性的争论，是一个纯粹经院哲学的问题。
+三有一种唯物主义学说，认为人是环境和教育的产物，因为认为改变了的人是另一种环境和改变了的教育的产物，——这种学说忘记了：环 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/" title="大学问"><div class="post-bg" style="background: /img/"></div></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/" title="大学问">大学问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-24T12:28:54.000Z" title="发表于 2024-02-24 20:28:54">2024-02-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-24T14:32:16.878Z" title="更新于 2024-02-24 22:32:16">2024-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%80%89%E8%AF%BB/">选读</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/#post-comment"><span class="valine-comment-count" data-xid="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">问曰：“《大学》者，昔儒以为大人之学矣。敢问大人之学何以在于明明德乎？”
+阳明子答曰：“大人者，以天地万物为一体者也。其视天下犹一家，中国犹一人焉。若夫间形骸而分尔我者，小人矣。大人之能以天地万物为一体也，非意之也，其心之仁本若是，其与天地万物而为一也，岂惟大人，虽小人之心亦莫不然，彼顾自小之耳。是故见孺子之入井，而必有怵惕恻隐之心焉，是其仁之与孺子而为一体也。孺子犹同类者也，见鸟兽之哀鸣觳觫，而必有不忍之心，是其仁之与鸟兽而为一体也。鸟兽犹有知觉者也，见草木之摧折而必有悯恤之心焉，是其仁之与草木而为一体也。草木犹有生意者也，见瓦石之毁坏而必有顾惜之心焉，是其仁之与瓦石而为一体也。是其一体之仁也，虽小人之心亦必有之。是乃根于天命之性，而自然灵昭不昧者也，是故谓之“明德 ”。小人之心既已分隔隘陋矣，而其一体之仁犹能不昧若此者，是其未动于欲，而未蔽于私之时也。及其动于欲，蔽于私，而利害相攻，忿怒相激，则将戕物圮类， 无所不为，其甚至有骨肉相残者，而一体之仁亡矣。是故苟无私欲之蔽，则虽小人之心，而其一体之仁犹大人也；一有私欲之蔽，则虽大人之心，而其分隔隘陋犹小人矣。故夫为大人之学者，亦惟去其 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/" title="情书中爱情的模样"><div class="post-bg" style="background: /img/"></div></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/" title="情书中爱情的模样">情书中爱情的模样</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-24T12:28:54.000Z" title="发表于 2023-02-24 20:28:54">2023-02-24</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-24T14:37:54.904Z" title="更新于 2024-02-24 22:37:54">2024-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%80%89%E8%AF%BB/">选读</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/#post-comment"><span class="valine-comment-count" data-xid="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+朱生豪与宋清如
+
+
+1. 我渴望和你打架，也渴望抱抱你。要是世上只有我们两个人多么好，我一定要把你欺负得哭不出来。
+
+
+2. 总之世上比你再可爱的人是没有了，我永远感谢不尽你待我的种种好处。我希望有一天……不说了。无数的爱。  
+
+
+3. 我的安慰即是思念你，你愿不愿待我好则非我所愿计及。  
+
+
+4. 我欢喜你，我欢喜你，我欢喜你，而且我欢喜你。
+
+对宋清如的各种称呼：阿宋、好人、宋，小宋，清如仁姐大人等等。
+
+
+王小波与李银河
+
+
+1. 我把我整个的灵魂都给你，连同它的怪癖，耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。
+
+
+2. 你为什么还要计较我一两次无心的过失对你的伤害呢？宽恕吧！原谅吧！我是粗心的人，别和我计较。
+
+
+3. 说实话，爱你爱得要命。你要是讨厌这句话就从这儿撕。你爱不爱另论。  
+
+
+4. 但愿我和你，是一支唱不完的歌。
+
+
+
+沈从文与张兆和
+
+
+1. 我行过许多地方的桥，看过许多次数的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人。
+
+
+2. 在青山绿水之间，我想牵着你的手，走过这座桥，桥上是绿叶红花，桥下是流水人家，桥的那头是青丝， ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" title="Camstar技术介绍"><div class="post-bg" style="background: /img/"></div></a></div><div class="recent-post-info"><a class="article-title" href="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" title="Camstar技术介绍">Camstar技术介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-04-20T07:32:12.000Z" title="发表于 2019-04-20 15:32:12">2019-04-20</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-24T14:31:27.490Z" title="更新于 2024-02-24 22:31:27">2024-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Camstar/">Camstar</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/#post-comment"><span class="valine-comment-count" data-xid="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Camstar版本：6.9
+Camstar 数据流向图Camstar Portal：Camstar 的Portal网站，位于Camstar 安装目录下的Camtsar Portal目录，http访问地址为“服务器地址&#x2F;CamstarPortal”，这是一个C#的网站项目，可以用VS打开。
+Camstar WCF Service：位于Camstar安装目录下的Camstar WCF Services目录，是一个C# 的WCF Service 。
+InSiteProxyService: 位于Camstar安装目录下的InSite Server目录，是InSiteXMLServer的代理服务。
+**InSiteXMLServer:**Designer服务真正的执行位置,位于Camstar安装目录下的InSite Server目录（猜测：可能利用mdb文件的内容运用类似反射的技术来构建Designer对象，Method的执行过程也可以通过自定义函数进行一定程度的了解）
+
+
+下面进行数据流向图中执行内容的介绍
+Camstar Portal​	首先获取页面控件上的数据(如何获取控件上的数 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="hexo搭建博客教程"><div class="post-bg" style="background: /img/"></div></a></div><div class="recent-post-info"><a class="article-title" href="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="hexo搭建博客教程">hexo搭建博客教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-01-16T13:29:11.000Z" title="发表于 2017-01-16 21:29:11">2017-01-16</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-24T14:30:58.772Z" title="更新于 2024-02-24 22:30:58">2024-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/#post-comment"><span class="valine-comment-count" data-xid="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Hexo是什么？　　Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+为什么使用Hexo？　　Hexo与Wordpress（博客平台）不同，wordpress运行需要搭建PHP运行环境和数据库，但是在网上申请云主机来搭建的话，需要不少的费用，而Hexo由于可以生成静态网页，我们完全可以利用基于git的代码托管平台的Pages服务功能，也就是我们熟知的Github
+（有必要了解下Git，Github的区别）以及Coding等等，建立永久免费的博客网站（Github、Coding应该暂时不会GG吧！0.0），另外Wordpress更适合新手，操作简单，感觉Hexo的*格更高，可以通过安装使用Hexo学到很多。
+Pages服务1一个免费的静态网页托管和演示服务。您可以使用  Pages服务 托管博客、项目官网等静态网页，还可以绑定自定义域名。`
+
+安装Hexo（安装到本地电脑即可）安装前的准备　　Hexo是基于node js的，所以我们肯定得安装Node.js，添加到path喔，安装方法自行搜索下 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/leecon.jfif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lichong</div><div class="author-info__description">鹰击长空，鱼翔浅底，万类霜天竞自由</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" href="mailto:1257727155@qq.com"><i class="fas fa-envelope"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/LicoCode" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://qm.qq.com/q/jpYIXqa7mw" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">光不会熄灭！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/" title="关于费尔巴哈的提纲"><div style="background: /img/"></div></a><div class="content"><a class="title" href="/2024/02/24/%E5%85%B3%E4%BA%8E%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E7%9A%84%E6%8F%90%E7%BA%B2/" title="关于费尔巴哈的提纲">关于费尔巴哈的提纲</a><time datetime="2024-02-24T12:33:20.000Z" title="发表于 2024-02-24 20:33:20">2024-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/" title="大学问"><div style="background: /img/"></div></a><div class="content"><a class="title" href="/2024/02/24/%E5%A4%A7%E5%AD%A6%E9%97%AE/" title="大学问">大学问</a><time datetime="2024-02-24T12:28:54.000Z" title="发表于 2024-02-24 20:28:54">2024-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/" title="情书中爱情的模样"><div style="background: /img/"></div></a><div class="content"><a class="title" href="/2023/02/24/%E6%83%85%E4%B9%A6%E4%B8%AD%E7%88%B1%E6%83%85%E7%9A%84%E6%A8%A1%E6%A0%B7/" title="情书中爱情的模样">情书中爱情的模样</a><time datetime="2023-02-24T12:28:54.000Z" title="发表于 2023-02-24 20:28:54">2023-02-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" title="Camstar技术介绍"><div style="background: /img/"></div></a><div class="content"><a class="title" href="/2019/04/20/Camstar%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/" title="Camstar技术介绍">Camstar技术介绍</a><time datetime="2019-04-20T07:32:12.000Z" title="发表于 2019-04-20 15:32:12">2019-04-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="hexo搭建博客教程"><div style="background: /img/"></div></a><div class="content"><a class="title" href="/2017/01/16/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" title="hexo搭建博客教程">hexo搭建博客教程</a><time datetime="2017-01-16T13:29:11.000Z" title="发表于 2017-01-16 21:29:11">2017-01-16</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%98%85%E8%AF%BB/"><span class="card-category-list-name">阅读</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Camstar/" style="font-size: 1.1em; color: #999">Camstar</a> <a href="/tags/%E9%80%89%E8%AF%BB/" style="font-size: 1.5em; color: #99a9bf">选读</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">二月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/04/"><span class="card-archive-list-date">四月 2019</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/01/"><span class="card-archive-list-date">一月 2017</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-09-12T02:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-24T14:46:40.702Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By lichong</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  function loadValine () {
+    function initValine () {
+      let initData = {
+        el: '#vcomment',
+        appId: '90XA3IWgY2jl1dc9JIr62Z4u-gzGzoHsz',
+        appKey: '8tD6XyvI2W8X5J6s7n8ZuxkC',
+        serverURLs: 'ilico.cn'
+      }
+      
+      const valine = new Valine(initData)
+    }
+
+    if (typeof Valine === 'function') initValine() 
+    else getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js').then(initValine)
+  }
+
+  window.pjax ? loadValine() : window.addEventListener('load', loadValine)
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.19.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'ilico.cn'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": '90XA3IWgY2jl1dc9JIr62Z4u-gzGzoHsz',
+        "X-LC-Key": '8tD6XyvI2W8X5J6s7n8ZuxkC',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
