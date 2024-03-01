@@ -52,7 +52,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-03-01 23:18:15'
+  postUpdate: '2024-03-01 23:23:51'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -229,7 +229,7 @@
       },
     }
 
-    fetch(`${serverURL}/1.1/classes/Comment?limit=10&order=-insertedAt`,settings)
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-insertedAt`,settings)
       .then(response => response.json())
       .then(data => {
         const valineArray = data.results.map(function (e) {
