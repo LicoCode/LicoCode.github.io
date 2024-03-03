@@ -137,7 +137,7 @@
 
   
   <url>
-    <loc>https://ilico.cn/tags/Camstar/</loc>
+    <loc>https://ilico.cn/tags/Hexo/</loc>
     <lastmod>2024-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -151,14 +151,14 @@
   </url>
   
   <url>
-    <loc>https://ilico.cn/tags/%E6%83%B3%E6%B3%95/</loc>
+    <loc>https://ilico.cn/tags/Camstar/</loc>
     <lastmod>2024-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ilico.cn/tags/Hexo/</loc>
+    <loc>https://ilico.cn/tags/%E6%83%B3%E6%B3%95/</loc>
     <lastmod>2024-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -181,7 +181,7 @@
 
   
   <url>
-    <loc>https://ilico.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://ilico.cn/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -195,7 +195,7 @@
   </url>
   
   <url>
-    <loc>https://ilico.cn/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://ilico.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
