@@ -6,13 +6,7 @@ https://ilico.cn/tags/index.html
 https://ilico.cn/link/index.html
 https://ilico.cn/categories/index.html
 https://ilico.cn/
-https://ilico.cn/tags/%E7%AC%94%E8%AE%B0/
-https://ilico.cn/tags/%E6%83%B3%E6%B3%95/
 https://ilico.cn/tags/Camstar/
-https://ilico.cn/tags/Hexo/
-https://ilico.cn/tags/%E9%80%89%E8%AF%BB/
 https://ilico.cn/tags/Obsidian/
-https://ilico.cn/categories/%E9%98%85%E8%AF%BB/
 https://ilico.cn/categories/%E6%8A%80%E6%9C%AF/
 https://ilico.cn/categories/%E6%95%99%E7%A8%8B/
-https://ilico.cn/categories/%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE/
