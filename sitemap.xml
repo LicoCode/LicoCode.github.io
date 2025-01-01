@@ -140,7 +140,7 @@
   </url>
   
   <url>
-    <loc>https://ilico.cn/tags/%E9%80%89%E8%AF%BB/</loc>
+    <loc>https://ilico.cn/tags/%E6%91%98%E5%BD%95/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -148,13 +148,6 @@
   
   <url>
     <loc>https://ilico.cn/tags/%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ilico.cn/tags/%E6%91%98%E5%BD%95/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -177,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://ilico.cn/categories/%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ilico.cn/categories/%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -192,6 +178,13 @@
   
   <url>
     <loc>https://ilico.cn/categories/%E4%B8%96%E7%95%8C%E8%A7%82/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ilico.cn/categories/%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

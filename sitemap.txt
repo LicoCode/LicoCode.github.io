@@ -14,11 +14,10 @@ https://ilico.cn/
 https://ilico.cn/tags/Camstar/
 https://ilico.cn/tags/Obsidian/
 https://ilico.cn/tags/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/
-https://ilico.cn/tags/%E9%80%89%E8%AF%BB/
-https://ilico.cn/tags/%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/
 https://ilico.cn/tags/%E6%91%98%E5%BD%95/
+https://ilico.cn/tags/%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/
 https://ilico.cn/categories/%E6%8A%80%E6%9C%AF/
 https://ilico.cn/categories/%E6%95%99%E7%A8%8B/
-https://ilico.cn/categories/%E9%98%85%E8%AF%BB/
 https://ilico.cn/categories/%E7%AE%A1%E7%90%86/
 https://ilico.cn/categories/%E4%B8%96%E7%95%8C%E8%A7%82/
+https://ilico.cn/categories/%E9%98%85%E8%AF%BB/
