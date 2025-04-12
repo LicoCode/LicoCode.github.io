@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气不错，睡觉</title>
+    <style>
+        :root {
+            --icon-size: min(30vmin, 200px);
+            --breath-color: rgba(0, 0, 0, 0.8); /* 统一颜色变量 */
+        }
+
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #87CEEB 0%, #E0F6FF 100%);
+        }
+
+        @media (max-width: 768px) {
+            .sleep-icon {
+                --icon-size: min(40vmin, 150px);
+            }
+        }
+
+        .sleep-icon {
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background: url('./zzz.jpg') center/contain no-repeat;
+            position: relative;
+            cursor: pointer;
+        }
+
+        @keyframes breath {
+            0%, 100% { 
+                filter: 
+                    drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                    drop-shadow(0 0 30px rgba(var(--breath-color), 0.3)) 
+                    brightness(0.95);
+                transform: scale(1);
+            }
+            50% { 
+                filter: 
+                    drop-shadow(0 0 25px rgba(var(--breath-color), 0.9))
+                    drop-shadow(0 0 50px rgba(var(--breath-color), 0.5))
+                    brightness(1.15);
+                transform: scale(1.15) rotate(-2deg);
+            }
+        }
+
+        @keyframes awake {
+            0%, 100% { 
+                filter: 
+                    drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                    drop-shadow(0 0 30px rgba(var(--breath-color), 0.3)) 
+                    brightness(0.85);
+                transform: scale(1);
+            }
+            50% { 
+                filter: 
+                    drop-shadow(0 0 25px rgba(var(--breath-color), 0.9))
+                    drop-shadow(0 0 50px rgba(var(--breath-color), 0.5))
+                    brightness(0.95);
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% {
+            transform: translate(0, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            10% {
+            transform: translate(-10px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            20% {
+            transform: translate(10px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            30% {
+            transform: translate(-10px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            40% {
+            transform: translate(10px, 0);
+            filter: 
+                drop-shadow(0 0 25px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 50px rgba(var(--breath-color), 0.5))
+            }
+            50% {
+            transform: translate(-5px, 0);
+            filter: 
+                drop-shadow(0 0 25px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 50px rgba(var(--breath-color), 0.5))
+            }
+            60% {
+            transform: translate(5px, 0);
+            filter: 
+                drop-shadow(0 0 25px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 50px rgba(var(--breath-color), 0.5))
+            }
+            70% {
+            transform: translate(-3px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            80% {
+            transform: translate(3px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+            90% {
+            transform: translate(-1px, 0);
+            filter: 
+                drop-shadow(0 0 15px rgba(var(--breath-color), 0.9))
+                drop-shadow(0 0 30px rgba(var(--breath-color), 0.3))
+            }
+        }
+
+        @keyframes angerShake {
+            0%, 100% { 
+                transform: translate(0, 0) rotate(0deg);
+                filter: 
+                    drop-shadow(0 0 25px rgba(247, 22, 22, 0.9))
+                    drop-shadow(0 0 50px rgba(255, 0, 0, 0.5));
+            }
+            25% {
+                transform: translate(-8px, -4px) rotate(3deg);
+                filter: 
+                    drop-shadow(0 0 25px rgba(247, 22, 22, 0.9))
+                    drop-shadow(0 0 50px rgba(255, 0, 0, 0.5));
+            }
+            50% {
+                transform: translate(6px, 5px) rotate(-5deg);
+                filter: 
+                    drop-shadow(0 0 25px rgba(247, 22, 22, 0.9))
+                    drop-shadow(0 0 50px rgba(255, 0, 0, 0.5));
+            }
+            75% {
+                transform: translate(-5px, 3px) rotate(2deg);
+                filter: 
+                    drop-shadow(0 0 25px rgba(247, 22, 22, 0.9))
+                    drop-shadow(0 0 50px rgba(255, 0, 0, 0.5));
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="sleep-icon" id="icon"></div>
+
+    <script>
+        const icon = document.getElementById('icon');
+        const stages = [
+            { duration: 6, breath: 3, color: '139, 136, 224' }, // N1 浅睡眠 
+            { duration: 16, breath: 4, color: '114, 139, 198' }, // N2 核心睡眠 
+            { duration: 12, breath: 6, color: '118, 94, 164' },   // N3 深度睡眠 
+            { duration: 14, breath: 2, color: '217, 156, 214' },   // REM 快速眼动 
+        ];
+
+        // 当前睡眠阶段索引
+        // 0: N1 浅睡眠, 1: N2 核心睡眠, 2: N3 深度睡眠, 3: REM 快速眼动
+        let currentSleepStage = 0;
+        // 抖动计数器
+        let shakeCount = 0;
+        let timeoutId = null;
+        let resetTimer = null;
+        let lastTriggerTime = 0;
+        // 睡觉图片路径
+        const sleepImage = './zzz.jpg'; 
+        // 愤怒图片路径
+        const angerImage = './aaa.jpg';
+        // 正常图片路径
+        const normalImage = './eee.jpg'; 
+
+        init();
+
+        function init() {
+            icon.style.backgroundImage = `url('${sleepImage}')`;
+            switchSleepStage();
+            // 同时绑定鼠标和触摸事件
+            icon.addEventListener('mouseenter', sleepShake);
+            icon.addEventListener('click', sleepShake);
+            icon.addEventListener('touchstart', sleepShake);
+        }
+
+        function updateColors(rgb) {
+            // 同步更新所有颜色相关属性
+            document.documentElement.style.setProperty('--breath-color', rgb);
+            
+        }
+
+        function switchSleepStage() {
+            const stage = stages[currentSleepStage];
+            updateColors(stage.color);
+            // 重置动画
+            icon.style.animation = 'none';
+            void icon.offsetWidth;
+            icon.style.animation = `breath ${stage.breath}s ease-in-out infinite`;
+            timeoutId = setTimeout(() => {
+                currentSleepStage = (currentSleepStage + 1) % stages.length;
+                switchSleepStage();
+            }, stage.duration * 1000);
+        }
+        
+
+
+
+        // 修改后的handleHover函数
+        function sleepShake(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            // 防抖处理（300ms间隔）
+            const now = Date.now();
+            if (now - lastTriggerTime < 300) return;
+            lastTriggerTime = now;
+            handleShake();
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(switchSleepStage, 2000);
+            handleShakeCount();
+        }
+
+        function handleShake(){
+            // 重置动画
+            icon.style.animation = 'none';
+            void icon.offsetWidth;
+            icon.style.animation = 'shake 2s';
+            
+        }
+
+        function handleShakeCount() {
+            shakeCount++;
+            clearTimeout(resetTimer);
+            if (shakeCount >= 4) {
+                switchAngerStage();
+            } else {
+                // 设置5秒重置计数器
+                resetTimer = setTimeout(() => {
+                    shakeCount = 0;
+                }, 5000);
+            }
+        }
+
+        function switchAngerStage () {
+            icon.removeEventListener('mouseenter', sleepShake);
+            icon.removeEventListener('click', sleepShake);
+            icon.removeEventListener('touchstart', sleepShake);
+            icon.removeEventListener('mouseenter', normalShake);
+            icon.removeEventListener('click', normalShake);
+            icon.removeEventListener('touchstart', normalShake);
+            setTimeout(() => {
+                icon.style.backgroundImage = `url('${angerImage}')`;
+                // 增强抖动效果
+                icon.style.animation = 'none';
+                void icon.offsetWidth;
+                icon.style.animation = 'angerShake 0.25s ease-in-out infinite';
+            }, 2000);
+
+            // 重置状态
+            shakeCount = 0;
+            clearTimeout(timeoutId);
+
+            // 10秒后恢复原状态
+            setTimeout(() => {
+                currentSleepStage = 0;
+                icon.style.animation = '';
+                switchNormalStage();
+            }, 6000);
+        }
+
+        function switchNormalStage () {
+            icon.addEventListener('mouseenter', normalShake);
+            icon.addEventListener('click', normalShake);
+            icon.addEventListener('touchstart', normalShake);
+            icon.style.animation = 'none';
+            void icon.offsetWidth;
+            icon.style.animation = 'awake 3s ease-in-out infinite';
+            document.documentElement.style.setProperty('--breath-color', '255, 209, 78');
+            icon.style.backgroundImage = `url('${normalImage}')`;
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                init();
+            }, 12000);
+        }
+
+        function normalShake(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            // 防抖处理（300ms间隔）
+            const now = Date.now();
+            if (now - lastTriggerTime < 300) return;
+            lastTriggerTime = now;
+            handleShake();
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(switchNormalStage, 2000);
+            handleShakeCount();
+        }
+
+
+        window.addEventListener('beforeunload', () => {
+            if (timeoutId) clearTimeout(timeoutId);
+        });
+
+
+    </script>
+</body>
+</html>
