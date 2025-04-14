@@ -171,6 +171,16 @@
     <div class="sleep-icon" id="icon"></div>
 
     <script>
+        // 在脚本最前面添加图片预加载逻辑
+        const preloadImages = (...urls) => {
+            urls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        };
+
+        // 预加载所有需要的图片
+        preloadImages('./zzz.jpg', './aaa.jpg', './eee.jpg');
         const icon = document.getElementById('icon');
         const stages = [
             { duration: 9, breath: 3, color: '139, 136, 224' }, // N1 浅睡眠 
