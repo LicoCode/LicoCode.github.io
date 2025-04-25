@@ -29,7 +29,7 @@ function fetchAddressByIP() {
     return fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            if (data.status === 'success') { // 检查是否成功返回数据
+            if (data) { // 检查是否成功返回数据
                 const ip = data.ip;
                 const city = data.city; // 城市名称
                 const region = data.region; // 省份/地区名称
