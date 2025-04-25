@@ -24,7 +24,7 @@ function fetchLocation() {
 
 // Get the city name based on the user's IP
 function fetchAddressByIP() {
-    const apiUrl = `https://ip-api.com/json/`;
+    const apiUrl = `https://ipapi.co/json/`;
 
     return fetch(apiUrl)
         .then(response => response.json())
@@ -33,7 +33,7 @@ function fetchAddressByIP() {
                 const ip = data.query;
                 const city = data.city; // 城市名称
                 const region = data.regionName; // 省份/地区名称
-                const country = data.country; // 国家名称
+                const country = data.country_name; // 国家名称
                 const latitude = data.lat;
                 const longitude = data.lon
                 console.log(`City: ${city}, Region: ${region}, Country: ${country}, Latitude: ${latitude}, Longitude: ${longitude}`);
