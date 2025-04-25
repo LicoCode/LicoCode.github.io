@@ -24,7 +24,7 @@ function fetchLocation() {
 
 // Get the city name based on the user's IP
 function fetchAddressByIP() {
-    const apiUrl = `http://ip-api.com/json/`;
+    const apiUrl = `https://ip-api.com/json/`;
 
     return fetch(apiUrl)
         .then(response => response.json())
