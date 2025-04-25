@@ -126,9 +126,8 @@ async function init(){
     
 }
 
-
-
 init();
+setInterval(init, 1800000);
 
 
 
