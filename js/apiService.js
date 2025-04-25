@@ -30,12 +30,12 @@ function fetchAddressByIP() {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') { // 检查是否成功返回数据
-                const ip = data.query;
+                const ip = data.ip;
                 const city = data.city; // 城市名称
-                const region = data.regionName; // 省份/地区名称
+                const region = data.region; // 省份/地区名称
                 const country = data.country_name; // 国家名称
-                const latitude = data.lat;
-                const longitude = data.lon
+                const latitude = data.latitude;
+                const longitude = data.longitude
                 console.log(`City: ${city}, Region: ${region}, Country: ${country}, Latitude: ${latitude}, Longitude: ${longitude}`);
                 return { city, region, country, latitude, longitude };
             } else {
