@@ -1,0 +1,107 @@
+/* 响应式设计：在小屏幕设备上调整图标大小 */
+@media (max-width: 768px) {
+    .status-icon {
+        --icon-size: min(40vmin, 150px); /* 图标的最大尺寸 */
+    }
+}
+
+/* 睡眠图标的基础样式 */
+.status-icon {
+    width: var(--icon-size); /* 使用全局变量定义宽度 */
+    height: var(--icon-size); /* 使用全局变量定义高度 */
+    background: center/contain no-repeat; /* 设置背景图片 */
+    position: relative; /* 相对定位 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击状态 */
+}
+
+/* 呼吸动画：模拟睡眠状态的呼吸效果 */
+@keyframes sleep {
+    0%, 100% { 
+        filter: 
+            drop-shadow(0 0 15px rgba(139, 136, 224, 0.9))
+            drop-shadow(0 0 30px rgba(139, 136, 224, 0.3)) 
+            brightness(0.95); /* 初始亮度 */
+        transform: scale(1); /* 初始缩放 */
+    }
+    50% { 
+        filter: 
+            drop-shadow(0 0 25px rgba(139, 136, 224, 0.9))
+            drop-shadow(0 0 50px rgba(139, 136, 224, 0.5))
+            brightness(1.15); /* 增加亮度 */
+        transform: scale(1.15) rotate(-2deg); /* 放大并轻微旋转 */
+    }
+}
+
+/* 清醒动画：模拟图标在清醒状态下的效果 */
+@keyframes awake {
+    0%, 100% { 
+        filter: 
+            drop-shadow(0 0 15px rgba(255, 209, 78, 0.9))
+            drop-shadow(0 0 30px rgba(255, 209, 78, 0.3)) 
+            brightness(1.0); /* 正常亮度 */
+        transform: scale(1); /* 初始缩放 */
+    }
+    50% { 
+        filter: 
+            drop-shadow(0 0 25px rgba(255, 209, 78, 0.9))
+            drop-shadow(0 0 50px rgba(255, 209, 78, 0.5))
+            brightness(1.05); /* 略微增加亮度 */
+        transform: scale(1.08); /* 略微放大 */
+    }
+}
+
+/* 摇动动画：模拟用户交互时的摇动效果 */
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0); /* 初始位置 */
+        filter: 
+            drop-shadow(0 0 15px rgba(16, 215, 102, 0.9))
+            drop-shadow(0 0 30px rgba(78, 255, 116, 0.3));
+    }
+    10% {
+        transform: translate(-10px, 0); /* 向左移动 */
+    }
+    20% {
+        transform: translate(10px, 0); /* 向右移动 */
+    }
+    30% {
+        transform: translate(-10px, 0); /* 再次向左移动 */
+    }
+    40% {
+        transform: translate(10px, 0); /* 再次向右移动 */
+    }
+    50% {
+        transform: translate(-5px, 0); /* 减小幅度 */
+    }
+    60% {
+        transform: translate(5px, 0); /* 减小幅度 */
+    }
+    70% {
+        transform: translate(-3px, 0); /* 最小幅度 */
+    }
+    80% {
+        transform: translate(3px, 0); /* 最小幅度 */
+    }
+    90% {
+        transform: translate(-1px, 0); /* 减弱到几乎静止 */
+    }
+}
+
+/* 愤怒动画：模拟图标在愤怒状态下的效果 */
+@keyframes anger {
+    0%, 100% { 
+        transform: translate(0, 0) rotate(0deg); /* 初始位置和角度 */
+        filter: 
+            drop-shadow(0 0 30px rgba(255, 94, 77, 0.9)) /* 柔和的橙红色阴影 */
+            drop-shadow(0 0 15px rgba(255, 140, 105, 0.8)); /* 较浅的橙色阴影 */
+    }
+    25% {
+        transform: translate(-8px, -4px) rotate(3deg); /* 向左上移动并旋转 */
+    }
+    50% {
+        transform: translate(6px, 5px) rotate(-5deg); /* 向右下移动并旋转 */
+    }
+    75% {
+        transform: translate(-5px, 3px) rotate(2deg); /* 向左下移动并旋转 */
+    }
+}

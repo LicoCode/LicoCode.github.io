@@ -1,0 +1,20 @@
+/* 定义全局 CSS 变量 */
+:root {
+    --icon-size: min(30vmin, 200px); /* 图标的最大尺寸 */
+}
+
+/* 设置 HTML 和 body 的基础样式 */
+html, body {
+    overflow: hidden; /* 禁止滚动 */
+    width: 100%; /* 占满视口宽度 */
+    height: 100%; /* 占满视口高度 */
+    margin: 0; /* 去除默认外边距 */
+    padding: 0; /* 去除默认内边距 */
+}
+
+/* 设置 body 的布局和背景 */
+body {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}

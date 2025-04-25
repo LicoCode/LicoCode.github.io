@@ -1,0 +1,11 @@
+/* 白天背景样式 */
+.day {
+    background: linear-gradient(120deg, #87CEEB 0%, #E0F6FF 100%);
+    transition: background 1s ease-in-out;
+}
+
+/* 黑夜背景样式 */
+.night {
+    background: linear-gradient(120deg, #2C3E50 0%, #34495E 100%);
+    transition: background 1s ease-in-out;
+}
