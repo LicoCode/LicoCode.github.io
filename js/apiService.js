@@ -1,5 +1,5 @@
 // Get longitude and latitude based on the user's location
-function fetchLocation() {
+export function fetchLocation() {
     return new Promise((resolve, reject) => {
         if (!navigator.geolocation) {
             reject(new Error('Browser does not support geolocation'));
@@ -23,7 +23,7 @@ function fetchLocation() {
 }
 
 // Get the city name based on the user's IP
-function fetchAddressByIP() {
+export function fetchAddressByIP() {
     const apiUrl = `https://ipapi.co/json/`;
 
     return fetch(apiUrl)
@@ -48,7 +48,7 @@ function fetchAddressByIP() {
         });
 }
 
-function fetchWeatherByCoordinates(lng, lat) {
+export function fetchWeatherByCoordinates(lng, lat) {
     const apiUrl = `https://api.open-meteo.com/v1/forecast?longitude=${lng}&latitude=${lat}&daily=sunset,sunrise&models=best_match&current_weather=true&timezone=auto&forecast_days=1`;
 
     return fetch(apiUrl)

@@ -1,15 +1,18 @@
 const icon = document.getElementById('icon');
-
 var currentStatus = '';
-
 let timeoutId = null; 
-
 let shakeCount = 0; 
-
 let resetTimer = null; 
-
 let lastTriggerTime = 0;  
 
+export function updateStatus(currentTime) {
+    const currentHour = new Date(currentTime).getHours();
+    if ((currentHour >= 22 || currentHour < 6) || (currentHour >= 12 && currentHour < 13)) {
+        setStatus('sleep');
+    } else {
+        setStatus('awake');
+    }
+}
 
 function setStatus(status){
     if(status == 'sleep'){

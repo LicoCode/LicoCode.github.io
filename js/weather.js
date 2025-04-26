@@ -1,3 +1,31 @@
+export function updateWeatherEffects(weatherCode, windSpeed, windDir) {
+    const windLevel = getWindLevel(windSpeed);
+    const windDirection = getWindDirection(windDir);
+
+    let effectType = '';
+
+    if (isRain(weatherCode)) {
+        effectType = 'Rain';
+        startRainEffect(getRainStrength(weatherCode), windLevel, windDirection);
+    } else if (isSnow(weatherCode)) {
+        effectType = 'Snow';
+        startSnowEffect(getSnowStrength(weatherCode), windLevel, windDirection);
+    } else if (isLightning(weatherCode)) {
+        effectType = 'Lightning';
+        startLightningEffect(getLightningStrength(weatherCode));
+    } else if (isCloudy(weatherCode)) {
+        effectType = 'Cloud';
+        startCloudEffect(getCloudStrength(weatherCode), windLevel, windDirection);
+    } else {
+        effectType = 'Clear';
+    }
+
+    // 打印控制台日志
+    console.log(`Weather Effect: ${effectType}`);
+    console.log(`Wind Level: ${windLevel}`);
+    console.log(`Wind Direction: ${windDirection}`);
+}
+
 function startRainEffect(rainLevel = 'medium', windLevel = 'none', windDirection = 'left') { // 默认中雨，中等风，风向向右
     const canvas = document.getElementById('weather-canvas');
     const ctx = canvas.getContext('2d');
@@ -403,6 +431,90 @@ function startCloudEffect(cloudLevel = 'medium', windLevel = 'medium', windDirec
     }
 
     animate();
+}
+
+
+/*
+等级	名称	风速范围（km/h）	陆地现象
+0	无风	<1	烟垂直上升
+1	软风	1-5	烟示风向
+2	轻风	6-11	树叶微动
+3	微风	12-19	树枝摇动
+4	和风	20-28	尘土飞扬
+5	劲风	29-38	小树摇摆
+6	强风	39-49	举伞困难
+7	疾风	50-61	步行受阻
+8	大风	62-74	树枝折断
+9	烈风	75-88	屋顶受损
+10	狂风	89-102	树木连根拔起
+11	暴风	103-117	广泛破坏
+12	飓风/台风	≥118	摧毁性破坏
+*/
+function getWindLevel(windSpeed) {
+    if (windSpeed < 11) return 'light';
+    if (windSpeed < 28) return 'medium';
+    return 'heavy';
+}
+
+// 划分16方位：每22.5°（360°/16）为一个区间
+function getWindDirection(windDirection) {
+    return windDirection < 180 ? 'left' : 'right';
+}
+
+/*
+0	晴朗的天空
+1、2、3	晴间多云
+45，48	雾和沉积雾凇
+51、53、55	毛毛雨：小雨、中雨、大雨
+56，57	冻毛毛雨：强度轻且密集
+61、63、65	降雨：小雨、中雨、大雨
+66，67	冻雨：强度轻和强度重
+71、73、75	降雪：小雪、中雪、大雪
+77	雪粒
+80、81、82	阵雨：小雨、中雨、强雨
+85，86	阵雪（小雪和大雪）
+95*	雷暴：轻微或中等
+96、99*	雷暴，伴有小到大冰雹
+*/
+
+function isRain(weatherCode) {
+    return [51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(weatherCode);
+}
+
+function isSnow(weatherCode) {
+    return [71, 73, 75, 77, 85, 86].includes(weatherCode);
+}
+
+function isLightning(weatherCode) {
+    return [95, 96, 99].includes(weatherCode);
+}
+
+function isCloudy(weatherCode) {
+    return [1, 2, 3, 45, 48].includes(weatherCode);
+}
+
+function getRainStrength(weatherCode) {
+    if ([51, 56, 61, 80].includes(weatherCode)) return 'light';
+    if ([53, 57, 63, 81].includes(weatherCode)) return 'medium';
+    return 'heavy';
+}
+
+function getCloudStrength(weatherCode) {
+    if ([1, 45].includes(weatherCode)) return 'light';
+    if ([2, 48].includes(weatherCode)) return 'medium';
+    return 'heavy';
+}
+
+function getSnowStrength(weatherCode) {
+    if ([71, 85].includes(weatherCode)) return 'light';
+    if ([73].includes(weatherCode)) return 'medium';
+    return 'heavy';
+}
+
+function getLightningStrength(weatherCode) {
+    if (weatherCode === 95) return 'light';
+    if (weatherCode === 96) return 'medium';
+    return 'heavy';
 }
 
 window.addEventListener('resize', () => {
