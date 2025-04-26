@@ -3,6 +3,7 @@ import { updateDayNightstate } from './daynight.js';
 import { updateStatus } from './status.js';
 import { getCachedLocation, getCachedAddressByIP, getCachedWeatherByCoordinates } from './cacheService.js';
 import { updateWeatherEffects } from './weather.js';
+import { sendDanmu } from './danmu.js';
 
 async function init() {
     try {
@@ -37,8 +38,15 @@ async function getWeatherInfo(coordinates) {
 
 document.addEventListener('DOMContentLoaded', () => {
     preloadImages('./assets/images/zzz.jpg', './assets/images/aaa.jpg', './assets/images/eee.jpg');
+    document.getElementById('danmu-input').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            sendDanmu();
+        }
+    });
     setTimeout(() => {
         init();
         setInterval(init, 1800000);
     }, 1000);
 });
+
+window.sendDanmu = sendDanmu;

@@ -1,0 +1,136 @@
+#danmu-container {
+    position: fixed;
+    bottom: 20px;  /* 输入框保持在底部 */
+    top: auto;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+}
+
+.danmu-stage {
+    position: fixed;  /* 改为固定定位 */
+    top: 20px;       /* 固定在顶部 */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px); /* 留出底部空间 */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.danmu-item {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 24px;  /* 从20px增大到24px */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: danmu 8s linear forwards;
+    top: 20px;
+}
+
+@keyframes danmu {
+    from { 
+        transform: translateX(100vw); 
+    }
+    to { 
+        transform: translateX(-100%);
+    }
+}
+
+.danmu-input {
+    width: 90%;
+    max-width: 600px;
+    min-width: 280px;
+    background: rgba(255,255,255,0.95);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#danmu-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid rgba(108, 99, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;  /* 从14px增大到16px */
+    background: rgba(255,255,255,0.9);
+    transition: all 0.3s ease;
+}
+
+#danmu-input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+}
+
+.danmu-input button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6c63ff 0%, #4a45d1 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.danmu-input button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    #danmu-container {
+        bottom: 10px; /* 保持移动端底部定位 */
+        top: auto;
+    }
+    
+    .danmu-input {
+        width: calc(100% - 4px);
+        margin: 2 2px;
+        gap: 8px;  /* 统一间距 */
+    }
+    
+    #danmu-input {
+        flex: 1;
+        min-width: 0;  /* 允许输入框收缩 */
+        font-size: 16px;
+    }
+    
+    .danmu-input button {
+        padding: 12px 20px;  /* 固定按钮宽度 */
+        flex-shrink: 0;  /* 禁止按钮收缩 */
+    }
+}
+
+@media (max-width: 375px) {
+
+    #danmu-input {
+        padding: 10px;
+        font-size: 18px;  /* 小屏幕增大到18px */
+    }
+    
+    .danmu-input {
+        gap: 6px;  /* 更紧凑的间距 */
+    }
+    
+    .danmu-input button {
+        padding: 10px 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .danmu-stage {
+        height: 300px;
+        top: -300px;
+    }
+    
+    .danmu-item {
+        font-size: 20px;  /* 横屏模式增大到20px */
+    }
+}

@@ -9,11 +9,20 @@
     <link rel="stylesheet" href="css/status.css">
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/daynight.css">
+    <link rel="stylesheet" href="css/danmu.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 <body id="daynight-container">
     <canvas id="weather-canvas"></canvas>
     <canvas id="lightning-canvas"></canvas>
     <div class="status-icon" id="icon"></div>
-    <script type="module" src="js/main.js"></script>
+    <div id="danmu-container">
+        <div class="danmu-input">
+            <input type="text" id="danmu-input" placeholder="输入弹幕内容...">
+            <button onclick="sendDanmu()">发送</button>
+        </div>
+        <div class="danmu-stage"></div>
+    </div>
+
 </body>
 </html>

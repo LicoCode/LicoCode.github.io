@@ -1,4 +1,4 @@
-import { fetchLocation, fetchAddressByIP, fetchWeatherByCoordinates } from './apiService.js';
+import { fetchLocation, fetchAddressByIP, fetchWeatherByCoordinates } from './weatherService.js';
 
 // 缓存有效时间（默认15分钟）
 const DEFAULT_CACHE_DURATION = 15 * 60 * 1000;
