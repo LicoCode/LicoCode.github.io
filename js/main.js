@@ -48,3 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(init, 1800000);
     }, 1000);
 });
+
+window.sendBarrage = sendBarrage;
