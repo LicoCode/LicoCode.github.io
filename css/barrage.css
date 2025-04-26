@@ -105,6 +105,8 @@
     .barrage-input button {
         padding: 12px 20px;  /* 固定按钮宽度 */
         flex-shrink: 0;  /* 禁止按钮收缩 */
+        pointer-events: auto;  /* 确保按钮可交互 */
+        cursor: pointer;       /* 添加触控反馈 */
     }
 }
 

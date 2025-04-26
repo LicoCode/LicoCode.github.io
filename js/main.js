@@ -37,6 +37,12 @@ async function getWeatherInfo(coordinates) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const sendButton = document.querySelector('.barrage-input button');
+    // 添加触摸事件监听
+    sendButton.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        sendBarrage();
+    });
     preloadImages('./assets/images/zzz.jpg', './assets/images/aaa.jpg', './assets/images/eee.jpg');
     document.getElementById('barrage-input').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
