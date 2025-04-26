@@ -57,9 +57,9 @@ async function init(){
         // 划分16方位：每22.5°（360°/16）为一个区间
         let windDirection = null;
         if(weatherInfo.WindDirection >= 0 && weatherInfo.WindDirection < 180){
-            windLevel = 'left' ;
+            windDirection = 'right' ;
         }else{
-            windLevel = 'right' ;
+            windDirection = 'left' ;
         }
         /*
         0	晴朗的天空
