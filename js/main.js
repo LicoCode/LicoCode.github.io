@@ -3,7 +3,7 @@ import { updateDayNightstate } from './daynight.js';
 import { updateStatus } from './status.js';
 import { getCachedLocation, getCachedAddressByIP, getCachedWeatherByCoordinates } from './cacheService.js';
 import { updateWeatherEffects } from './weather.js';
-import { sendDanmu } from './danmu.js';
+import { sendBarrage } from './barrage.js';
 
 async function init() {
     try {
@@ -38,9 +38,9 @@ async function getWeatherInfo(coordinates) {
 
 document.addEventListener('DOMContentLoaded', () => {
     preloadImages('./assets/images/zzz.jpg', './assets/images/aaa.jpg', './assets/images/eee.jpg');
-    document.getElementById('danmu-input').addEventListener('keydown', (e) => {
+    document.getElementById('barrage-input').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            sendDanmu();
+            sendBarrage();
         }
     });
     setTimeout(() => {
@@ -48,5 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(init, 1800000);
     }, 1000);
 });
-
-window.sendDanmu = sendDanmu;
