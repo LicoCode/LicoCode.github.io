@@ -283,9 +283,12 @@ function startCloudEffect(cloudCount, windSpeedKmh, windDirection) {
     // 调整风速转换比例，使云移动更符合人眼观察
     const windSpeedPxPerFrame = windSpeedKmh * 0.05; // 降低转换比例
 
+    // 将角度转换为弧度
+    const radians = ((windDirection + 90) * Math.PI) / 180 ;
+    
     // 计算风向的x和y分量
-    const windX = -Math.sin(windDirection); // 使用sin计算x分量
-    const windY = Math.cos(windDirection); // 使用cos计算y分量，取负值表示向下移动
+    const windX = Math.cos(radians); // 使用cos计算x分量
+    const windY = Math.sin(radians); // 使用sin计算y分量
 
     // 创建云层数组
     const clouds = [];
