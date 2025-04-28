@@ -3,7 +3,7 @@ import { updateDayNightstate } from './daynight.js';
 import { updateStatus } from './status.js';
 import { getCachedLocation, getCachedAddressByIP, getCachedWeatherByCoordinates } from './cacheService.js';
 import { updateWeatherEffects } from './weather.js';
-import { sendBarrage } from './barrage.js';
+//import { sendBarrage } from './barrage.js';
 
 async function init() {
     try {
@@ -39,20 +39,20 @@ async function getWeatherInfo(coordinates) {
 document.addEventListener('DOMContentLoaded', () => {
     const sendButton = document.querySelector('.barrage-input button');
     // 添加触摸事件监听
-    sendButton.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        sendBarrage();
-    });
+    // sendButton.addEventListener('touchstart', (e) => {
+    //     e.preventDefault();
+    //     sendBarrage();
+    // });
     preloadImages('./assets/images/zzz.jpg', './assets/images/aaa.jpg', './assets/images/eee.jpg');
-    document.getElementById('barrage-input').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            sendBarrage();
-        }
-    });
+    // document.getElementById('barrage-input').addEventListener('keydown', (e) => {
+    //     if (e.key === 'Enter') {
+    //         sendBarrage();
+    //     }
+    // });
     setTimeout(() => {
         init();
         setInterval(init, 1800000);
     }, 1000);
 });
 
-window.sendBarrage = sendBarrage;
+//window.sendBarrage = sendBarrage;
