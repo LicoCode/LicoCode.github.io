@@ -1,4 +1,4 @@
-import { chatWithDeepSeek } from './deepseekService.js'; // 导入 chatAI.js 中的函数
+import { chatWithDeepSeek } from './deepseekService.js'; 
 // 弹幕功能
 let barrageChannel = [];
 const maxBarrage = 50;
