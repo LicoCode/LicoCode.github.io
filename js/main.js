@@ -21,11 +21,12 @@ async function init() {
 }
 
 async function getCoordinates() {
-    try {
-        return await getCachedLocation();
-    } catch (error) {
-        return await getCachedAddressByIP();
-    }
+     return await getCachedAddressByIP();
+    // try {
+    //     return await getCachedLocation();
+    // } catch (error) {
+    //     return await getCachedAddressByIP();
+    // }
 }
 
 async function getWeatherInfo(coordinates) {
