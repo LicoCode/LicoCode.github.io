@@ -7,7 +7,12 @@ let lastTriggerTime = 0;
 
 export function updateStatus(currentTime) {
     const currentHour = new Date(currentTime).getHours();
-    if ((currentHour >= 22 || currentHour < 6) || (currentHour >= 12 && currentHour < 13)) {
+    // 晚上10:30到早上6:30，或中午12:30到13:00
+    const currentMinute = new Date(currentTime).getMinutes();
+    if (
+        (currentHour > 22 || (currentHour === 22 && currentMinute >= 30) || currentHour < 6 || (currentHour === 6 && currentMinute < 30)) ||
+        (currentHour === 12 && currentMinute >= 30)
+    ) {
         setStatus('sleep');
     } else {
         setStatus('awake');
