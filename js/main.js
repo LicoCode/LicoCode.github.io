@@ -3,7 +3,6 @@ import { updateDayNightstate } from './daynight.js';
 import { updateStatus } from './status.js';
 import { getCachedLocation, getCachedAddressByIP, getCachedWeatherByCoordinates } from './cacheService.js';
 import { updateWeatherEffects } from './weather.js';
-//import { sendBarrage } from './barrage.js';
 
 async function init() {
     try {

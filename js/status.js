@@ -63,7 +63,9 @@ function startShake(e){
     icon.style.animation = 'shake 2s';
     if (timeoutId) clearTimeout(timeoutId); // 清除当前阶段切换定时器
     timeoutId = setTimeout(() => setStatus(currentStatus), 2000);
-    recordShakeCount();
+    if (currentStatus === 'sleep') {
+        recordShakeCount();
+    }
 }
 
 function recordShakeCount() {
