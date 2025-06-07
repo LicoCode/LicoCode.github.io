@@ -1,4 +1,5 @@
 const icon = document.getElementById('icon');
+let container;
 var currentStatus = '';
 let timeoutId = null; 
 let shakeCount = 0; 
@@ -68,15 +69,40 @@ function startShake(e){
     icon.style.animation = 'shake 2s';
     if (timeoutId) clearTimeout(timeoutId); // 清除当前阶段切换定时器
     timeoutId = setTimeout(() => setStatus(currentStatus), 2000);
-    if (currentStatus === 'sleep') {
-        recordShakeCount();
-    }
+    recordShakeCount();
 }
 
 function recordShakeCount() {
     shakeCount++;
-    if (shakeCount >= 4) {
-        startAnger(); // 超过3次切换到愤怒阶段
+    if(currentStatus === 'awake'){
+        if(shakeCount == 25){
+            showContent('justdoit')
+            shakeCount = 0;
+        }
+        else if(shakeCount == 22){
+            showContent('find')
+        }
+        else if(shakeCount == 20){
+            showContent('default')
+
+        }
+        else if(shakeCount == 17){
+            showContent('persistence')
+        }
+        else if(shakeCount == 13){
+            showContent('deception')
+        }else if(shakeCount == 9){
+            showContent('waiting')
+        }
+        else if(shakeCount == 3){
+            showContent('secret')
+        }
+        clearTimeout(resetTimer); // 清除计数重置定时器
+        resetTimer = setTimeout(() => {
+            shakeCount = 0; // 5秒后重置计数
+        }, 10000);
+    } else if (shakeCount >= 4 && currentStatus === 'sleep') {
+            startAnger(); // 超过3次切换到愤怒阶段
     } else {
         clearTimeout(resetTimer); // 清除计数重置定时器
         resetTimer = setTimeout(() => {
@@ -99,6 +125,12 @@ function removeEventListener(){
 
 
 
-
-
-
+function showContent(type) {
+    if (container) {
+        container.classList.remove('active');
+    }
+    container = document.getElementById(type);
+    container.classList.add('active');
+    // 自动激活弹窗
+    document.getElementById('modal').classList.add('active');
+}
