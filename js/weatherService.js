@@ -26,7 +26,7 @@ export function fetchLocation() {
 export function fetchAddressByIP() {
     const apiUrl = `https://ipapi.co/json/`;
 
-    return fetch(apiUrl)
+    return fetch(apiUrl, {cache: 'default'})
         .then(response => response.json())
         .then(data => {
             if (data) { // 检查是否成功返回数据
@@ -51,7 +51,7 @@ export function fetchAddressByIP() {
 export function fetchWeatherByCoordinates(lng, lat) {
     const apiUrl = `https://api.open-meteo.com/v1/forecast?longitude=${lng}&latitude=${lat}&daily=sunset,sunrise&models=best_match&current_weather=true&timezone=auto&forecast_days=1`;
 
-    return fetch(apiUrl)
+    return fetch(apiUrl, {cache: 'default'})
         .then(response => response.json())
         .then(data => {
             if (data && data.current_weather && data.daily) { // 检查是否成功返回数据
