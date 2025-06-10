@@ -75,10 +75,10 @@ function startShake(e){
 function recordShakeCount() {
     shakeCount++;
     if(currentStatus === 'awake'){
-        if(shakeCount == 39){
+        if(shakeCount == 42){
             showContent('goaway')
         }
-        else if(shakeCount == 36){
+        else if(shakeCount == 37){
             showContent('annoying')
         }
         else if(shakeCount == 32){
