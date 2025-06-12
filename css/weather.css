@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none; /* 确保特效不影响页面交互 */
-    z-index: 9999; /* 确保特效在最上层 */
+    z-index: 999; /* 确保特效在最上层 */
 }
 
 #lightning-canvas {
@@ -15,5 +15,5 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none; /* 确保特效不影响页面交互 */
-    z-index: 9999; /* 确保特效在最上层 */
+    z-index: 999; /* 确保特效在最上层 */
 }
