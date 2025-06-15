@@ -39,26 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-// 弹窗控制逻辑
-const modal = document.getElementById('modal');
-const closeBtn = document.querySelector('.close-btn');
-// 关闭弹窗的多种方式
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-});
-
-// 点击模态框外部关闭
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.classList.remove('active');
-    }
-});
-
-// ESC键关闭
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-    }
-});
 
 

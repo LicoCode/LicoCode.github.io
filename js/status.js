@@ -75,43 +75,6 @@ function startShake(e){
 function recordShakeCount() {
     shakeCount++;
     if(currentStatus === 'awake'){
-        if(shakeCount == 42){
-            showContent('goaway')
-        }
-        else if(shakeCount == 37){
-            showContent('annoying')
-        }
-        else if(shakeCount == 32){
-            showContent('receive')
-        }
-        else if(shakeCount == 29){
-            showContent('boring')
-        }
-        else if(shakeCount == 25){
-            showContent('justdoit')
-        }
-        else if(shakeCount == 22){
-            showContent('find')
-        }
-        else if(shakeCount == 20){
-            showContent('default')
-
-        }
-        else if(shakeCount == 17){
-            showContent('persistence')
-        }
-        else if(shakeCount == 13){
-            showContent('deception')
-        }else if(shakeCount == 9){
-            showContent('waiting')
-        }
-        else if(shakeCount == 3){
-            showContent('secret')
-        }
-        clearTimeout(resetTimer); // 清除计数重置定时器
-        resetTimer = setTimeout(() => {
-            shakeCount = 0; // 5秒后重置计数
-        }, 30000);
     } else if (shakeCount >= 4 && currentStatus === 'sleep') {
             startAnger(); // 超过3次切换到愤怒阶段
     } else {
