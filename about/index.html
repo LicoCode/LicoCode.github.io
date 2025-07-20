@@ -299,6 +299,12 @@
             icon.style.backgroundImage = `url('${normalImage}')`;
             if (timeoutId) clearTimeout(timeoutId);
             timeoutId = setTimeout(() => {
+                icon.removeEventListener('mouseenter', sleepShake);
+                icon.removeEventListener('click', sleepShake);
+                icon.removeEventListener('touchstart', sleepShake);
+                icon.removeEventListener('mouseenter', normalShake);
+                icon.removeEventListener('click', normalShake);
+                icon.removeEventListener('touchstart', normalShake);
                 init();
             }, 12000);
         }
