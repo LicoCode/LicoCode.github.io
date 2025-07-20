@@ -1,0 +1,1 @@
+export function preloadImages(...e){e.forEach((e=>{(new Image).src=e}))}
